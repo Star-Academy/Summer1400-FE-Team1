@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div>
+            <form action="">
+                <label for="name">First name</label>
+                <input type="text" name="name"/>
+                <label for="lastName">Last name</label>
+                <input type="text" name="lastName"/>
+                <label for="userName">Username</label>
+                <input type="text" name="userName" />
+                <label for="password" >Password</label>
+                <input type="password" name="password" pattern="[a-z]+[A-Z]+[0-9]+" minlength="8" maxlength="12"/>
+                <label for="email" >Email</label>
+                <input type="email" name="email"/>
+                <label for="gender">Gender</label>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" value="female" id="female" />
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="male" id="male"/>
+                <a href="#">Already have an account? login</a>
+                <input type="submit" />
+            </form>
+        </div>
+    </main>
+</body>
+</html>
