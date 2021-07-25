@@ -1,0 +1,27 @@
+body {
+  display: grid;
+  place-content: center;
+  background-color: var(--color-black);
+}
+body .form {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1rem);
+  place-content: center;
+  background-color: var(--color-purple-05);
+  width: 25rem;
+  height: 80vh;
+  border-radius: 0.5rem;
+  border-image: linear-gradient(#f6b73c, #4d9f0c);
+}
+body input {
+  width: 10rem;
+  height: 1.5rem;
+}
+body input [type=radio] {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=SignupCss.css.map */
