@@ -12,10 +12,16 @@
     "url": "git+https://github.com/Star-Academy/Summer1400-FE-Team1.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Parsa Asadi,Maede Karimi",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Star-Academy/Summer1400-FE-Team1/issues"
   },
-  "homepage": "https://github.com/Star-Academy/Summer1400-FE-Team1#readme"
+  "homepage": "https://github.com/Star-Academy/Summer1400-FE-Team1#readme",
+  "devDependencies": {
+    "sass": "^1.36.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
 }
