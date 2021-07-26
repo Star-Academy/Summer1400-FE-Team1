@@ -1,72 +1,110 @@
-body {
-    display: grid;
-    place-items: center;
+main {
     background-color: var(--color-black);
-    form{
+    .form{
         display: grid;
-        place-items: center;
-        grid-template-columns: 100%;
-        grid-template-rows: auto ;
-        grid-template-areas: "field" "gender" "submit";
-        row-gap: 0.2rem;
-        // background-color: var(--color-purple-10);
-        width: 25rem;
-        //inja width: 100% mizarm eshtebah mishe
-        height: 100vh;
-        &:first-child{
-            color: var(--color-purple-06);
-        }
-        h1{
-            margin-top: 3rem;
-            font-size: 5rem;
-        }
-        .form__fields{
-            grid-area: "field";
-            input{
+        form{
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            align-items: stretch;
+            grid-auto-columns: auto;
+            grid-auto-rows: minmax(10px auto);
+            place-self: center;
+            row-gap: 1rem;
+            width: 90%;
+            height: 100vh;
+            h1:first-of-type{
+                color: var(--color-purple-06);
+            }
+            .form__name{
+                place-self: center;
+                margin-top: 7rem;
+                font-size: 7rem;
+            }
+            .form__fields{
+                input{
+                    width: 100%;
+                    height: 2.8rem;
+                    border:none;
+                    border-radius: 0.5rem;
+                    color: var(--color-black);
+                    text-align: center;
+                    margin: 1rem auto;
+                    font-size: 1.3rem;
+                    transition: .3s linear;
+                }
+                &:focus{
+                    border: var(--color-gray-25) solid;
+                    width: 110%;
+                }
+                label{
+                    opacity: 0;
+                }
+            }
+            .form__radio{
+                margin-top: -6rem;
                 width: 100%;
-                height: 2.5rem;
-                border:none;
-                border-radius: 0.2rem;
-                color: var(--color-black);
-                text-align: center;
-                margin: 1rem auto;
-                font-size: 1rem;
+                place-self: center;
+                display: block;
+                // grid-template-columns: repeat(4, 1fr);
+                border: solid 2px white;
+                label{
+                    color: var(--color-purple-06);
+                    text-align: center;
+                    margin: auto 0.6rem;
+                    opacity: 1;
+                    font-size: 1.4rem;
+                    
+                }
+                > input{
+                    display: inline-block;
+                    font-size: 5rem;
+                    color: blanchedalmond;
+                }
+                // :nth-of-type(2){
+                    //     grid-column: 1/2;
+                    // }
+                    // :nth-of-type(3){
+                        //     grid-column: 2/3;
+                        // }
+                        // color: var(--color-purple-06);
+
+                // width: 7rem;
+                // font-size: 2rem;
+                // text-align: center;
+                // label{
+                // }
             }
-            &:focus{
-                
-            }
-            label{
-                opacity: 0;
+            .signUp{
+                place-self: center;
+                > a{
+                    display: block;
+                    text-decoration: none;
+                    color: var(--color-white);
+                    font-size: 1.3rem;
+                    margin-top: 0.6rem;
+                    text-align: center;
+                }
+                [type="submit"]{
+                    display: block;
+                    background-color: var(--color-purple-13);
+                    color: var(--color-white);
+                    width: 80vw;
+                    border: none;
+                    border-radius: 2rem;
+                    height: 3rem;
+                    font-size: 2rem;
+                }
             }
         }
-        .form__radio{
-            grid-area: "gender";
-            align-self: center;
-            display: flex;
-            flex-direction: row;
-            width: 7rem;
-            font-size: 2rem;
-            justify-content: space-between;
-            text-align: center;
-            label{
-                text-align: center;
-                margin: auto 0.6rem;
-                opacity: 1;
+    }
+}
+@media (min-width: 600px) {
+    .form{
+        .form__fields{
+            input{
+                height: 3.5rem;
             }
         }
-        a{
-            text-decoration: none;
-            color: var(--color-white);
-            font-size: 1rem;
-        }
-        [type="submit"]{
-            background-color: var(--color-purple-13);
-            color: var(--color-white);
-            width: 50%;
-            border: none;
-            border-radius: 2rem;
-            height: 3rem;
-            font-size: 2rem;
-        }
+    
     }
 }
