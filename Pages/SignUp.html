@@ -11,25 +11,32 @@
 <body>
     <header></header>
     <main>
-        <div class="form">
+        <div>
             <form action="">
-                <label for="name">First name</label>
-                <input type="text" name="name"/>
-                <label for="lastName">Last name</label>
-                <input type="text" name="lastName"/>
-                <label for="userName">Username</label>
-                <input type="text" name="userName" />
-                <label for="password" >Password</label>
-                <input type="password" name="password" pattern="[a-z]+[A-Z]+[0-9]+" minlength="8" maxlength="12"/>
-                <label for="email" >Email</label>
-                <input type="email" name="email"/>
-                <label for="gender">Gender</label>
-                <label for="female">Female</label>
-                <input type="radio" name="gender" value="female" id="female" />
-                <label for="male">Male</label>
-                <input type="radio" name="gender" value="male" id="male"/>
-                <a href="#">Already have an account? login</a>
-                <input type="submit" />
+                <div class="form__name">
+                    <h1>SpotiWhy</h1>
+                </div>
+                <div class="form__fields">
+                    <label for="name">First name</label>
+                    <input type="text" name="name" placeholder="نام"/>
+                    <label for="lastName">Last name</label>
+                    <input type="text" name="lastName" placeholder="نام خانوادگی"/>
+                    <label for="userName">Username</label>
+                    <input type="text" name="userName" placeholder="نام کاربری" />
+                    <label for="password" >Password</label>
+                    <input type="password" name="password" placeholder="رمز عبور" pattern="[a-z]+[A-Z]+[0-9]+" minlength="8" maxlength="12"/>
+                    <label for="email" >Email</label>
+                    <input type="email" name="email" placeholder="ایمیل"/>
+                </div>
+                <label for="gender">جنسیت</label>
+                <div class="form__radio">
+                    <label for="female">زن</label>
+                    <input type="radio" name="gender" value="female" id="female" />
+                    <label for="male">مرد</label>
+                    <input type="radio" name="gender" value="male" id="male"/>
+                </div>
+                <a href="#">حساب کاربری دارید؟ وارد شوید</a>
+                <input type="submit" value="ثبت نام" />
             </form>
         </div>
     </main>

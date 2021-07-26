@@ -1,25 +1,72 @@
 body {
     display: grid;
-    place-content: center;
+    place-items: center;
     background-color: var(--color-black);
-    .form{
-        position: relative;
+    form{
         display: grid;
-        grid-template-columns: repeat(1,1rem);
-        place-content: center;
-        background-color: var(--color-purple-05);
+        place-items: center;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "field" "gender" "submit";
+        row-gap: 0.2rem;
+        // background-color: var(--color-purple-10);
         width: 25rem;
-        height: 80vh ;
-        border-radius: 0.5rem;
-        border-image: linear-gradient(#f6b73c, #4d9f0c)  }
-        input{
-            width: 10rem;
-            height: 1.5rem;
-            [type="radio"]{
-                width: 2rem;
-                height: 2rem;
-                display: inline-block;
+        //inja width: 100% mizarm eshtebah mishe
+        height: 100vh;
+        &:first-child{
+            color: var(--color-purple-06);
+        }
+        h1{
+            margin-top: 3rem;
+            font-size: 5rem;
+        }
+        .form__fields{
+            grid-area: "field";
+            input{
+                width: 100%;
+                height: 2.5rem;
+                border:none;
+                border-radius: 0.2rem;
+                color: var(--color-black);
+                text-align: center;
+                margin: 2rem auto;
+                font-size: 1rem;
+            }
+            &:focus{
+                
+            }
+            label{
+                opacity: 0;
             }
         }
-    
+        .form__radio{
+            grid-area: "gender";
+            align-self: center;
+            display: flex;
+            flex-direction: row;
+            width: 7rem;
+            font-size: 2rem;
+            justify-content: space-between;
+            text-align: center;
+            label{
+                text-align: center;
+                margin: auto 0.6rem;
+                opacity: 1;
+            }
+        }
+        a{
+            text-decoration: none;
+            color: var(--color-white);
+            font-size: 1rem;
+        }
+        [type="submit"]{
+            background-color: var(--color-purple-13);
+            color: var(--color-white);
+            width: 50%;
+            border: none;
+            border-radius: 2rem;
+            height: 3rem;
+            font-size: 2rem;
+        }
+    }
 }
