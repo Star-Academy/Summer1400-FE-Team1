@@ -41,7 +41,7 @@ main {
                 }
             }
             .form__radio{
-                margin-top: -6rem;
+                margin-top: -3rem;
                 width: 100%;
                 place-self: center;
                 display: grid;
@@ -63,7 +63,7 @@ main {
                     place-self: start;
                 }
             }
-            .signUp{
+            .signUp , .login{
                 place-self: center;
                 > a{
                     display: block;
@@ -87,13 +87,18 @@ main {
         }
     }
 }
-@media (min-width: 600px) {
+@media (min-width: 425px) {
     .form{
         .form__fields{
             input{
-                height: 3.5rem;
+                height: 3.5rem !important;
             }
         }
     
+    }
+    .signUp , .login{
+        input{
+            height:4rem !important ;
+        }
     }
 }

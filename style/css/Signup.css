@@ -42,7 +42,7 @@ main .form form .form__fields label {
   opacity: 0;
 }
 main .form form .form__radio {
-  margin-top: -6rem;
+  margin-top: -3rem;
   width: 100%;
   place-self: center;
   display: grid;
@@ -63,10 +63,10 @@ main .form form .form__radio > label {
 main .form form .form__radio > input {
   place-self: start;
 }
-main .form form .signUp {
+main .form form .signUp, main .form form .login {
   place-self: center;
 }
-main .form form .signUp > a {
+main .form form .signUp > a, main .form form .login > a {
   display: block;
   text-decoration: none;
   color: var(--color-white);
@@ -74,7 +74,7 @@ main .form form .signUp > a {
   margin-top: 0.6rem;
   text-align: center;
 }
-main .form form .signUp [type=submit] {
+main .form form .signUp [type=submit], main .form form .login [type=submit] {
   display: block;
   background-color: var(--color-purple-13);
   color: var(--color-white);
@@ -85,9 +85,13 @@ main .form form .signUp [type=submit] {
   font-size: 2rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 425px) {
   .form .form__fields input {
-    height: 3.5rem;
+    height: 3.5rem !important;
+  }
+
+  .signUp input, .login input {
+    height: 4rem !important;
   }
 }
 
