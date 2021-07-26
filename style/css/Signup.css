@@ -45,20 +45,23 @@ main .form form .form__radio {
   margin-top: -6rem;
   width: 100%;
   place-self: center;
-  display: block;
-  border: solid 2px white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.2rem;
+  row-gap: 2rem;
 }
-main .form form .form__radio label {
+main .form form .form__radio label:first-of-type {
+  grid-column: 1/5;
+  place-self: center;
+}
+main .form form .form__radio > label {
   color: var(--color-purple-06);
+  font-size: 2rem;
+  place-self: end;
   text-align: center;
-  margin: auto 0.6rem;
-  opacity: 1;
-  font-size: 1.4rem;
 }
 main .form form .form__radio > input {
-  display: inline-block;
-  font-size: 5rem;
-  color: blanchedalmond;
+  place-self: start;
 }
 main .form form .signUp {
   place-self: center;
@@ -88,4 +91,4 @@ main .form form .signUp [type=submit] {
   }
 }
 
-/*# sourceMappingURL=SignupCss.css.map */
+/*# sourceMappingURL=Signup.css.map */

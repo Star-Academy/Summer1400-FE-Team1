@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>ورود</title>
+    <link rel="stylesheet" href="../style/css/Colors.css">
+    <link rel="stylesheet" href="../style/css/Login.css">
 </head>
 <body>
     <header></header>
     <main>
-        <div>
+        <div class="form">
             <form action="">
-                <label for="userName">نام کاربری</label>
-                <input type="text" name="userName" placeholder="نام کاربری" />
-                <label for="password" >رمز عبور</label>
-                <input type="password" name="password" placeholder="رمز عبور" pattern="[a-z]+[A-Z]+[0-9]+" minlength="8" maxlength="12"/>
-                <a href="./SignUpPage.html">آیا حساب کاربری ندارید؟ ثبت نام کنید</a>
-                <a href="#">فراموشی رمز</a>
-                <input type="submit" />
+                <div class="form__name">
+                    <h1>SpotiWhy</h1>
+                </div>
+                <div class="form__fields">
+                    <label for="userName">نام کاربری</label>
+                    <input type="text" name="userName" placeholder="نام کاربری" />
+                    <label for="password" >رمز عبور</label>
+                    <input type="password" name="password" placeholder="رمز عبور" pattern="[a-z]+[A-Z]+[0-9]+" minlength="8" maxlength="12"/>
+                </div>
+                <div class="login">
+                    <input type="submit" value="ورود" />
+                    <a href="#">فراموشی رمز</a>
+                    <a href="./SignUpPage.html">آیا حساب کاربری ندارید؟ ثبت نام کنید</a>
+                </div>
             </form>
         </div>
     </main>
