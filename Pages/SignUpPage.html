@@ -11,7 +11,7 @@
 <body>
     <header></header>
     <main>
-        <div>
+        <div class="form">
             <form action="">
                 <div class="form__name">
                     <h1>SpotiWhy</h1>
@@ -28,15 +28,17 @@
                     <label for="email" >Email</label>
                     <input type="email" name="email" placeholder="ایمیل"/>
                 </div>
-                <label for="gender">جنسیت</label>
                 <div class="form__radio">
-                    <label for="female">زن</label>
+                    <label for="gender">جنسیت</label>
+                    <label for="male">زن</label>
                     <input type="radio" name="gender" value="female" id="female" />
                     <label for="male">مرد</label>
                     <input type="radio" name="gender" value="male" id="male"/>
                 </div>
-                <a href="#">حساب کاربری دارید؟ وارد شوید</a>
-                <input type="submit" value="ثبت نام" />
+                <div class="signUp">
+                    <input type="submit" value="ثبت نام" />
+                    <a href="#">حساب کاربری دارید؟ وارد شوید</a>
+                </div>
             </form>
         </div>
     </main>
