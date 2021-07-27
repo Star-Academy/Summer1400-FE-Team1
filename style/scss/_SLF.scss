@@ -1,0 +1,87 @@
+@mixin same-for-signup-login-forgotpass($inheight,$gridrow){
+    main {
+        --rlist: var(--c) 0 4px, transparent 0 7rem;
+	--dim: 40% 60% no-repeat;
+	--ang: 45deg;
+    box-shadow: 2px 2px 17px #000;
+	background: 
+			repeating-linear-gradient(var(--ang-0, -45deg), 
+					var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
+			repeating-linear-gradient(var(--ang-1, 45deg), 
+					var(--rlist)) var(--pos-1, 0 10%)/ var(--dim), 
+			linear-gradient(var(--ang), var(--nlist));
+		--ang-0: -120deg;
+		--ang-1: 120deg;
+        --c: var(--color-purple-08);
+		--nlist: var(--color-purple-16), var(--color-black);
+        // 
+//         background-color: #010109;
+// opacity: 1;
+// background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #010109 40px ), repeating-linear-gradient( #0410f655, #0410f6 );
+        .form{
+            display: grid;
+            form{
+                display: grid;
+                grid-template-rows: repeat(#{$gridrow}, 1fr);
+                align-items: stretch;
+                grid-auto-columns: auto;
+                grid-auto-rows: minmax(40px auto);
+                place-self: center;
+                row-gap: 1rem;
+                width: 90%;
+                height: 100vh;
+                h1:first-of-type{
+                    color: var(--color-purple-06);
+                }
+                .form__name{
+                    justify-self: center;
+                    margin-top: 7rem;
+                    font-size: 7rem;
+                }
+                .form__fields{
+                    align-self: center;
+                    input{
+                        width: 100%;
+                        height:#{$inheight}vh;
+                        border:none;
+                        border-radius: 0.5rem;
+                        color: var(--color-black);
+                        text-align: center;
+                        margin: 1rem auto;
+                        font-size: 1.3rem;
+                        transition: .3s linear;
+                    }
+                    &:focus{
+                        border: var(--color-gray-25) solid;
+                        width: 110%;
+                    }
+                    label{
+                        opacity: 0;
+                    }
+                }
+                .signUp , .login , .send-email{
+                    align-self: start;
+                    justify-self: center;
+                    > a{
+                        display: block;
+                        text-decoration: none;
+                        color: var(--color-white);
+                        font-size: 1.3rem;
+                        margin-top: 0.6rem;
+                        text-align: center;
+                    }
+                    [type="submit"]{
+                        display: block;
+                        background-color: var(--color-purple-10);
+                        color: var(--color-white);
+                        width: 80vw;
+                        border: none;
+                        border-radius: 2rem;
+                        height: $inheight +1vh;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
