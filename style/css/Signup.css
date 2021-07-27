@@ -47,7 +47,6 @@ main .form form .form__fields input {
 }
 main .form form .form__fields:focus {
   border: var(--color-gray-25) solid;
-  width: 110%;
 }
 main .form form .form__fields label {
   opacity: 0;
@@ -74,6 +73,10 @@ main .form form .signUp [type=submit], main .form form .login [type=submit], mai
   height: 6vh;
   font-size: 2rem;
 }
+main .form form .signUp input:hover, main .form form .login input:hover, main .form form .send-email input:hover {
+  cursor: pointer;
+  background-color: var(--color-purple-05);
+}
 
 form .form__radio {
   margin-top: -3rem;
@@ -89,7 +92,7 @@ form .form__radio label:first-of-type {
   place-self: center;
 }
 form .form__radio > label {
-  color: var(--color-purple-06);
+  color: var(--color-white);
   font-size: 2rem;
   place-self: end;
   text-align: center;

@@ -47,7 +47,6 @@ main .form form .form__fields input {
 }
 main .form form .form__fields:focus {
   border: var(--color-gray-25) solid;
-  width: 110%;
 }
 main .form form .form__fields label {
   opacity: 0;
@@ -73,6 +72,10 @@ main .form form .signUp [type=submit], main .form form .login [type=submit], mai
   border-radius: 2rem;
   height: 6vh;
   font-size: 2rem;
+}
+main .form form .signUp input:hover, main .form form .login input:hover, main .form form .send-email input:hover {
+  cursor: pointer;
+  background-color: var(--color-purple-05);
 }
 
 /*# sourceMappingURL=Login.css.map */
