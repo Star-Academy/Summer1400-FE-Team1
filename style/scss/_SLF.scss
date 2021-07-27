@@ -1,20 +1,10 @@
 @mixin same-for-signup-login-forgotpass($inheight,$gridrow){
     main {
-        --rlist: var(--c) 0 4px, transparent 0 7rem;
-	    --dim: 40% 60% no-repeat;
-	    --ang: 45deg;
-        box-shadow: 2px 2px 17px #000;
-	    background: 
-			repeating-linear-gradient(var(--ang-0, -45deg), 
-					var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
-			repeating-linear-gradient(var(--ang-1, 45deg), 
-					var(--rlist)) var(--pos-1, 0 10%)/ var(--dim), 
-			linear-gradient(var(--ang), var(--nlist));
-		--ang-0: -120deg;
-		--ang-1: 120deg;
-        --c: var(--color-purple-08);
-		--nlist: var(--color-purple-16), var(--color-black);
+        @include backcolor;
         .form{
+            @media (min-width:1200px){
+                height: 40%;
+            }
             display: grid;
             form{
                 display: grid;
@@ -23,9 +13,18 @@
                 grid-auto-columns: auto;
                 grid-auto-rows: minmax(40px auto);
                 place-self: center;
+                padding: 2rem 2rem 2rem 2rem;
                 row-gap: 1rem;
-                width: 90%;
+                width: 100%;
                 height: 100vh;
+                @media (min-width:1200px){
+                    background-color: var(--color-gray-08);
+                    box-shadow: 2px 2px 30px var(--color-gray-50);
+                    width: 80%;
+                    // height: 80%;
+                    opacity: 0.79;
+                    margin: 10rem auto;
+                }
                 h1:first-of-type{
                     color: var(--color-purple-06);
                 }
@@ -33,11 +32,17 @@
                     justify-self: center;
                     margin-top: 7rem;
                     font-size: 7rem;
+                    @media (min-width:425px){
+                        font-size: 9rem;
+                    }
                 }
                 .form__fields{
                     align-self: center;
-                    input{
-                        width: 100%;
+                    justify-self: center;
+                    width: 100%;
+                    > input{
+                        display: block;
+                        width: 80%;
                         height:#{$inheight}vh;
                         border:none;
                         border-radius: 0.5rem;
@@ -46,34 +51,49 @@
                         margin: 1rem auto;
                         font-size: 1.3rem;
                         transition: .3s linear;
+                        @media (min-width:425px){
+                            font-size: 2rem;
+                        }
                     }
                     &:focus{
                         border: var(--color-gray-25) solid;
                     }
                     label{
                         opacity: 0;
+                        // @media (min-width:1200px){
+                        //     opacity: 1 ;
+                        // }
                     }
                 }
                 .signUp , .login , .send-email{
+                    width: 100%;
                     align-self: start;
                     justify-self: center;
                     > a{
+                        margin:0 auto;
                         display: block;
                         text-decoration: none;
                         color: var(--color-white);
                         font-size: 1.3rem;
                         margin-top: 0.6rem;
                         text-align: center;
+                        @media (min-width:425px){
+                            font-size: 1.7rem;
+                        }
                     }
                     [type="submit"]{
-                        display: block;
+                        margin:0 auto;
+                        display:block;
                         background-color: var(--color-purple-10);
                         color: var(--color-white);
-                        width: 80vw;
+                        width: 80%;
                         border: none;
                         border-radius: 2rem;
                         height: $inheight +1vh;
                         font-size: 2rem;
+                        @media (min-width:425px){
+                            font-size: 2.5rem;
+                        }
                     }
                     input:hover{
                         cursor: pointer;
@@ -83,4 +103,20 @@
             }
         }
     }
+}
+@mixin backcolor{
+    --rlist: var(--c) 0 1px, transparent 0 17rem;
+	    --dim: 100% 100% no-repeat;
+	    --ang: 45deg;
+        box-shadow: 2px 2px 17px  var(--color-purple-06);
+	    background: 
+			repeating-linear-gradient(var(--ang-0, -45deg), 
+					var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
+			repeating-linear-gradient(var(--ang-1, 45deg), 
+					var(--rlist)) var(--pos-1, 0 0)/ var(--dim), 
+			linear-gradient(var(--ang), var(--nlist));
+		--ang-0: -120deg;
+		--ang-1: 120deg;
+        --c: var(--color-purple-16);
+		--nlist: var(--color-purple-16), var(--color-black);
 }

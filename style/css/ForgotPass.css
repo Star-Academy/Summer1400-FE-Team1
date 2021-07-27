@@ -1,16 +1,21 @@
 main {
-  --rlist: var(--c) 0 4px, transparent 0 7rem;
-  --dim: 40% 60% no-repeat;
+  --rlist: var(--c) 0 1px, transparent 0 17rem;
+  --dim: 100% 100% no-repeat;
   --ang: 45deg;
-  box-shadow: 2px 2px 17px #000;
-  background: repeating-linear-gradient(var(--ang-0, -45deg), var(--rlist)) var(--pos-0, 0 0)/var(--dim), repeating-linear-gradient(var(--ang-1, 45deg), var(--rlist)) var(--pos-1, 0 10%)/var(--dim), linear-gradient(var(--ang), var(--nlist));
+  box-shadow: 2px 2px 17px var(--color-purple-06);
+  background: repeating-linear-gradient(var(--ang-0, -45deg), var(--rlist)) var(--pos-0, 0 0)/var(--dim), repeating-linear-gradient(var(--ang-1, 45deg), var(--rlist)) var(--pos-1, 0 0)/var(--dim), linear-gradient(var(--ang), var(--nlist));
   --ang-0: -120deg;
   --ang-1: 120deg;
-  --c: var(--color-purple-08);
+  --c: var(--color-purple-16);
   --nlist: var(--color-purple-16), var(--color-black);
 }
 main .form {
   display: grid;
+}
+@media (min-width: 1200px) {
+  main .form {
+    height: 40%;
+  }
 }
 main .form form {
   display: grid;
@@ -19,9 +24,19 @@ main .form form {
   grid-auto-columns: auto;
   grid-auto-rows: minmax(40px auto);
   place-self: center;
+  padding: 2rem 2rem 2rem 2rem;
   row-gap: 1rem;
-  width: 90%;
+  width: 100%;
   height: 100vh;
+}
+@media (min-width: 1200px) {
+  main .form form {
+    background-color: var(--color-gray-08);
+    box-shadow: 2px 2px 30px var(--color-gray-50);
+    width: 80%;
+    opacity: 0.79;
+    margin: 10rem auto;
+  }
 }
 main .form form h1:first-of-type {
   color: var(--color-purple-06);
@@ -31,11 +46,19 @@ main .form form .form__name {
   margin-top: 7rem;
   font-size: 7rem;
 }
+@media (min-width: 425px) {
+  main .form form .form__name {
+    font-size: 9rem;
+  }
+}
 main .form form .form__fields {
   align-self: center;
-}
-main .form form .form__fields input {
+  justify-self: center;
   width: 100%;
+}
+main .form form .form__fields > input {
+  display: block;
+  width: 80%;
   height: 6.5vh;
   border: none;
   border-radius: 0.5rem;
@@ -45,6 +68,11 @@ main .form form .form__fields input {
   font-size: 1.3rem;
   transition: 0.3s linear;
 }
+@media (min-width: 425px) {
+  main .form form .form__fields > input {
+    font-size: 2rem;
+  }
+}
 main .form form .form__fields:focus {
   border: var(--color-gray-25) solid;
 }
@@ -52,10 +80,12 @@ main .form form .form__fields label {
   opacity: 0;
 }
 main .form form .signUp, main .form form .login, main .form form .send-email {
+  width: 100%;
   align-self: start;
   justify-self: center;
 }
 main .form form .signUp > a, main .form form .login > a, main .form form .send-email > a {
+  margin: 0 auto;
   display: block;
   text-decoration: none;
   color: var(--color-white);
@@ -63,15 +93,26 @@ main .form form .signUp > a, main .form form .login > a, main .form form .send-e
   margin-top: 0.6rem;
   text-align: center;
 }
+@media (min-width: 425px) {
+  main .form form .signUp > a, main .form form .login > a, main .form form .send-email > a {
+    font-size: 1.7rem;
+  }
+}
 main .form form .signUp [type=submit], main .form form .login [type=submit], main .form form .send-email [type=submit] {
+  margin: 0 auto;
   display: block;
   background-color: var(--color-purple-10);
   color: var(--color-white);
-  width: 80vw;
+  width: 80%;
   border: none;
   border-radius: 2rem;
   height: 7.5vh;
   font-size: 2rem;
+}
+@media (min-width: 425px) {
+  main .form form .signUp [type=submit], main .form form .login [type=submit], main .form form .send-email [type=submit] {
+    font-size: 2.5rem;
+  }
 }
 main .form form .signUp input:hover, main .form form .login input:hover, main .form form .send-email input:hover {
   cursor: pointer;
