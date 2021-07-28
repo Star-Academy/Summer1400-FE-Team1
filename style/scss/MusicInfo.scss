@@ -1,0 +1,298 @@
+@mixin volume-icons{
+    width: 7vw;
+    height: 7vw;
+    margin: 0 0.8rem;
+    // padding-top: 1.6rem;
+    cursor: pointer;
+    @media (min-width:725px){
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    @media (min-width:1200px){
+        width: 4rem;
+        height: 4rem;
+    }
+
+}
+@mixin sidebar{
+    height: 0.2rem;
+    width: 100rem;
+    -webkit-appearance: none;
+    z-index: 100;
+    position: relative;
+    background-color:var(--color-purple-06);
+    &::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        width: 1.3rem;
+        height: 1.3rem;
+        background-color: var(--color-white);
+        border-radius: 999rem;
+        cursor: pointer;
+        transform: scale(1);
+    }
+    &:active::-webkit-slider-thumb{
+        transform: scale(1.3);
+    }
+}
+@mixin repeat-like{
+    background-color: transparent;
+    border: none;
+    align-self: center;
+    width: 3rem;
+    height: 4rem;
+    margin:0 3vw;
+}
+@mixin color-size-detail-1200{
+    @media (min-width:1200px){
+            background-color: var(--color-gray-20);
+            font-size: 2.5rem;
+    }
+}
+@mixin detail{
+        &::-webkit-scrollbar{
+            display: block;
+        }
+        z-index: 4;
+        text-align: center;
+        width: 100%;
+        font-size:2vw;
+        color: var(--color-white);
+        background-color:var(--color-purple-07);
+        @media (min-width:725px){
+            width: 500px;
+            text-align: center;
+        }
+        @include color-size-detail-1200;
+        margin-top: 3rem;
+        summary{
+            // position: sticky;
+            left: 50%;
+            font-size: 4vw;
+            height: 2rem;
+            margin-bottom: 2.5vw;
+            @include color-size-detail-1200()
+        }
+}
+main{
+    display: block;
+    .music__container{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        .music__content{
+            margin-bottom: 0px;
+            width:100%;
+            height:90vh;
+            overflow: hidden;
+            .img--back{
+                .back__music__img{
+                    position: fixed;
+                    background-repeat: repeat;
+                    width: 140%;
+                    height: 100%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    z-index: 1;
+                    filter: blur(3px);
+                    -webkit-filter: blur(3px);
+                }
+                .blacklayer{
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                    position: absolute;
+                    background-color: var(--color-black);
+                    opacity: 0.4;
+                    background-size: cover;
+                    @media (min-width:1200px){
+                        opacity: 0.8;
+                    }
+                }
+            }
+            .volume__container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                z-index: 3;
+                width: 100%;
+                height: 2rem;
+                margin-top: 3.5rem;
+                img{
+                    @include volume-icons;
+                }
+                #vol{
+                    @include sidebar;
+                }
+            }
+            .img--music{
+                position: relative;
+                width: 100%;
+                height: 45vh; 
+                z-index: 3;
+                .music__img{
+                    position: absolute;
+                    top: 40%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    border-radius: 50%;
+                    width: 20rem ;
+                    height: 20rem;
+                    @media (min-width: 725px){
+                        width: 30rem;
+                        height: 30rem;
+                    }
+                    border: 0.2rem solid var(--color-white);
+                }
+                .title__artist{
+                    @media (min-width:1200px){
+                        padding-top: 6rem;
+                    }
+                    color: whitesmoke;
+                    position: relative;
+                    height: 3.5rem;
+                    padding: 0 2.5rem;
+                    top:75%;
+                    text-align: center;
+                    h2{
+                        font-size: 2.3rem;
+                        @media (min-width:1200px){
+                            font-size: 3rem;
+                        } 
+                    }
+                    h4{
+                        font-size: 1.8rem;
+                        @media (min-width:1200px){
+                            font-size: 2.3rem;
+                        }
+                    }
+                    @media (min-width:725px){
+                        top: 62%;
+                    }
+                }
+            }
+            .rate{
+                position: relative;
+                width: 90%;
+                height: 4rem;
+                // background-color: whitesmoke;
+                z-index: 3;
+                // left: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                // top: -5%;
+                margin: 2rem auto;
+                span{
+                    // background-color: chartreuse;
+                    // background-color: yellow;
+                    width: 5rem;
+                    height: 5rem;
+                    font-size: 3rem;
+                    color: var(--color-white);
+                }
+                #speaker{
+                    img{
+                        @include volume-icons;
+                    }
+                }
+            }
+            .current__time{
+                position: relative;
+                z-index: 3;
+                padding: 0 0.2rem 0.2rem 0.2rem;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                justify-content: space-around;
+                place-items: center;
+                // top: -10%;
+                margin-top: 3rem;
+                color: var(--color-white);
+                font-size: 2.5rem;
+                @media (min-width:1200px){
+                    font-size: 4rem;
+                }
+                input{
+                    // position: fixed;
+                    grid-column: 1/3;
+                    @include sidebar;
+                    height: 0.6rem;
+                    width: 65vw;
+                    margin-bottom: 0.7rem;
+                }
+            }
+            .btns{
+                position: relative;
+                // top: -8%;
+                margin: 2rem auto;
+                display: flex;
+                align-content: space-around ;
+                justify-content: center;
+                width: 100%;
+                height: 5rem;
+                z-index: 3;
+                .controls{
+                    // width: 10rem;
+                    display: inline-block;
+                    margin: 0 1rem;
+                    @media (min-width:725px){
+                        margin: 0 5rem;
+                    }
+                    button{
+                        @include repeat-like;
+                        // width: 8rem;
+                        // height:8rem;
+                        
+                        // @media (min-width:725px){
+                            //     width: 12rem ;
+                            //     height: 6rem;
+                            // }
+                            // @media (min-width:1200px){
+                                //     width: 10rem;
+                                //     height: 10rem;
+                                // }
+                        span{
+                            color: var(--color-white);
+                            font-size: 10vw;
+                            @media (min-width:1200px){
+                            font-size: 7rem;
+                        }
+                        }
+                    }
+                }
+                button{
+                    @include repeat-like;
+                    span{
+                        color: var(--color-white);
+                        font-size: 7vw;
+                        @media (min-width:1200px){
+                            font-size: 7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    details{
+        position: absolute;
+        height: 4vh;
+        @include detail;
+        @media (min-width:725px){
+            border-radius: 999px;
+        }
+    }
+    details[open]{
+        // position: fixed;
+        position: fixed;
+        bottom: 0;
+        @media (min-width:725px){
+            border-radius: 10px;
+        }
+        overflow: scroll;
+        height: 15vh;
+        @include detail;
+    }
+}
