@@ -1,6 +1,3 @@
-main {
-  display: block;
-}
 main .music__container {
   display: flex;
   align-items: flex-end;
@@ -9,16 +6,16 @@ main .music__container {
   height: 100vh;
 }
 main .music__container .music__content {
-  margin-bottom: 0px;
   width: 100%;
-  height: 90vh;
+  position: absolute;
+  height: 100vh;
   overflow: hidden;
 }
 main .music__container .music__content .img--back .back__music__img {
   position: fixed;
   background-repeat: repeat;
   width: 140%;
-  height: 100%;
+  height: 100vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -27,8 +24,9 @@ main .music__container .music__content .img--back .back__music__img {
   -webkit-filter: blur(3px);
 }
 main .music__container .music__content .img--back .blacklayer {
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 2;
   position: absolute;
   background-color: var(--color-black);
@@ -272,7 +270,7 @@ main .music__container .music__content .btns button span {
     font-size: 7rem;
   }
 }
-main details {
+main .music__container details {
   position: absolute;
   height: 4vh;
   z-index: 4;
@@ -283,39 +281,39 @@ main details {
   background-color: var(--color-purple-07);
   margin-top: 3rem;
 }
-main details::-webkit-scrollbar {
+main .music__container details::-webkit-scrollbar {
   display: block;
 }
 @media (min-width: 725px) {
-  main details {
+  main .music__container details {
     width: 500px;
     text-align: center;
   }
 }
 @media (min-width: 1200px) {
-  main details {
+  main .music__container details {
     background-color: var(--color-gray-20);
     font-size: 2.5rem;
   }
 }
-main details summary {
+main .music__container details summary {
   left: 50%;
   font-size: 4vw;
   height: 2rem;
   margin-bottom: 2.5vw;
 }
 @media (min-width: 1200px) {
-  main details summary {
+  main .music__container details summary {
     background-color: var(--color-gray-20);
     font-size: 2.5rem;
   }
 }
 @media (min-width: 725px) {
-  main details {
+  main .music__container details {
     border-radius: 999px;
   }
 }
-main details[open] {
+main .music__container details details[open] {
   position: fixed;
   bottom: 0;
   overflow: scroll;
@@ -329,33 +327,33 @@ main details[open] {
   margin-top: 3rem;
 }
 @media (min-width: 725px) {
-  main details[open] {
+  main .music__container details details[open] {
     border-radius: 10px;
   }
 }
-main details[open]::-webkit-scrollbar {
+main .music__container details details[open]::-webkit-scrollbar {
   display: block;
 }
 @media (min-width: 725px) {
-  main details[open] {
+  main .music__container details details[open] {
     width: 500px;
     text-align: center;
   }
 }
 @media (min-width: 1200px) {
-  main details[open] {
+  main .music__container details details[open] {
     background-color: var(--color-gray-20);
     font-size: 2.5rem;
   }
 }
-main details[open] summary {
+main .music__container details details[open] summary {
   left: 50%;
   font-size: 4vw;
   height: 2rem;
   margin-bottom: 2.5vw;
 }
 @media (min-width: 1200px) {
-  main details[open] summary {
+  main .music__container details details[open] summary {
     background-color: var(--color-gray-20);
     font-size: 2.5rem;
   }

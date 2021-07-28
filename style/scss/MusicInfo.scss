@@ -74,24 +74,24 @@
         }
 }
 main{
-    display: block;
     .music__container{
+        // position: fixed;
         display: flex;
         align-items: flex-end;
         justify-content: center;
         width: 100%;
         height: 100vh;
         .music__content{
-            margin-bottom: 0px;
             width:100%;
-            height:90vh;
+            position: absolute;
+            height:100vh;
             overflow: hidden;
             .img--back{
                 .back__music__img{
                     position: fixed;
                     background-repeat: repeat;
                     width: 140%;
-                    height: 100%;
+                    height: 100vh;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%,-50%);
@@ -100,8 +100,9 @@ main{
                     -webkit-filter: blur(3px);
                 }
                 .blacklayer{
+                    position: relative;
                     width: 100%;
-                    height: 100%;
+                    height: 100vh;
                     z-index: 2;
                     position: absolute;
                     background-color: var(--color-black);
@@ -275,24 +276,24 @@ main{
                 }
             }
         }
-    }
-    details{
-        position: absolute;
-        height: 4vh;
-        @include detail;
-        @media (min-width:725px){
-            border-radius: 999px;
+        details{
+            position: absolute;
+            height: 4vh;
+            @include detail;
+            @media (min-width:725px){
+                border-radius: 999px;
+            }
+            details[open]{
+                // position: fixed;
+                position: fixed;
+                bottom: 0;
+                @media (min-width:725px){
+                    border-radius: 10px;
+                }
+                overflow: scroll;
+                height: 15vh;
+                @include detail;
+            }
         }
-    }
-    details[open]{
-        // position: fixed;
-        position: fixed;
-        bottom: 0;
-        @media (min-width:725px){
-            border-radius: 10px;
-        }
-        overflow: scroll;
-        height: 15vh;
-        @include detail;
     }
 }
