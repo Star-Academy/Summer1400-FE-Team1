@@ -1,6 +1,5 @@
 @use './Colors.scss';
 .music-section{
-    color:#fff;
     min-height: 30vh;
     width: 100%;
     padding:2rem 6rem;
@@ -9,6 +8,7 @@
     flex-direction: column;
     justify-content: right;
     align-items: flex-start;
+    color: #fff;
     li:nth-child(n+7){
         display: none;
     }
@@ -28,6 +28,44 @@
         text-align: right;
         margin-bottom: 1rem;
     }
+    .music-card{
+        *{
+            text-decoration: none;
+            color:#fff;
+        }
+        background-color: var(--color-black);
+        min-width: 18rem;
+        min-height: 18rem;
+        max-width: 20rem;
+        text-align: right;
+        margin:0.2rem 2.1rem;
+        @media (max-width: 572px) {
+            margin: .5rem 0.2rem;
+        }
+        cursor: pointer;
+        border:0.1rem var(--color-black) solid;
+        img{
+            max-height: 18rem;
+            width: 100%;
+            opacity: 1;
+            @media (max-width: 572px) {
+               height: auto;
+            }
+        }
+        .info{
+            padding: 1rem;
+        }
+        .music-name{
+            font-size: 1.7rem;
+        }
+        .singer-name {
+            font-size: 1rem;
+        }
+        .music-info{
+            color: var(--color-white);
+            font-size: 1.2rem;;
+        }
+    } 
     .cards-container{
         width: 100%;
         display: flex;
@@ -52,40 +90,6 @@
             justify-items: center;
             
         }
-        .music-card{
-            background-color: var(--color-black);
-            min-width: 18rem;
-            min-height: 18rem;
-            max-width: 20rem;
-            text-align: right;
-            margin:0 2.1rem;
-            @media (max-width: 572px) {
-                margin: .5rem 0;
-            }
-            cursor: pointer;
-            border:0.1rem var(--color-black) solid;
-            img{
-                max-height: 18rem;
-                width: 100%;
-                opacity: 1;
-                @media (max-width: 572px) {
-                   height: auto;
-                }
-            }
-            .info{
-                padding: 1rem;
-            }
-            .music-name{
-                font-size: 1.7rem;
-            }
-            .singer-name {
-                font-size: 1rem;
-            }
-            .music-info{
-                color: var(--color-white);
-                font-size: 1.2rem;;
-            }
-        } 
         .artist-card{
             background-color: var(--color-black);
             min-width: 18rem;
@@ -109,3 +113,4 @@
         }
     }
 }
+

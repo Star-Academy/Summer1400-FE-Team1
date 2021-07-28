@@ -57,7 +57,6 @@
 }
 
 .music-section {
-  color: #fff;
   min-height: 30vh;
   width: 100%;
   padding: 2rem 6rem;
@@ -66,6 +65,7 @@
   flex-direction: column;
   justify-content: right;
   align-items: flex-start;
+  color: #fff;
 }
 .music-section li:nth-child(n+7) {
   display: none;
@@ -85,6 +85,48 @@
   width: 100%;
   text-align: right;
   margin-bottom: 1rem;
+}
+.music-section .music-card {
+  background-color: var(--color-black);
+  min-width: 18rem;
+  min-height: 18rem;
+  max-width: 20rem;
+  text-align: right;
+  margin: 0.2rem 2.1rem;
+  cursor: pointer;
+  border: 0.1rem var(--color-black) solid;
+}
+.music-section .music-card * {
+  text-decoration: none;
+  color: #fff;
+}
+@media (max-width: 572px) {
+  .music-section .music-card {
+    margin: 0.5rem 0.2rem;
+  }
+}
+.music-section .music-card img {
+  max-height: 18rem;
+  width: 100%;
+  opacity: 1;
+}
+@media (max-width: 572px) {
+  .music-section .music-card img {
+    height: auto;
+  }
+}
+.music-section .music-card .info {
+  padding: 1rem;
+}
+.music-section .music-card .music-name {
+  font-size: 1.7rem;
+}
+.music-section .music-card .singer-name {
+  font-size: 1rem;
+}
+.music-section .music-card .music-info {
+  color: var(--color-white);
+  font-size: 1.2rem;
 }
 .music-section .cards-container {
   width: 100%;
@@ -111,44 +153,6 @@
   flex-direction: row;
   justify-content: flex-end;
   justify-items: center;
-}
-.music-section .cards-container .music-card {
-  background-color: var(--color-black);
-  min-width: 18rem;
-  min-height: 18rem;
-  max-width: 20rem;
-  text-align: right;
-  margin: 0 2.1rem;
-  cursor: pointer;
-  border: 0.1rem var(--color-black) solid;
-}
-@media (max-width: 572px) {
-  .music-section .cards-container .music-card {
-    margin: 0.5rem 0;
-  }
-}
-.music-section .cards-container .music-card img {
-  max-height: 18rem;
-  width: 100%;
-  opacity: 1;
-}
-@media (max-width: 572px) {
-  .music-section .cards-container .music-card img {
-    height: auto;
-  }
-}
-.music-section .cards-container .music-card .info {
-  padding: 1rem;
-}
-.music-section .cards-container .music-card .music-name {
-  font-size: 1.7rem;
-}
-.music-section .cards-container .music-card .singer-name {
-  font-size: 1rem;
-}
-.music-section .cards-container .music-card .music-info {
-  color: var(--color-white);
-  font-size: 1.2rem;
 }
 .music-section .cards-container .artist-card {
   background-color: var(--color-black);
