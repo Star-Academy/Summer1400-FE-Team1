@@ -1,0 +1,27 @@
+{
+  "name": "Summer1400-FE-Team1-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch style/scss:style/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Star-Academy/Summer1400-FE-Team1.git"
+  },
+  "keywords": [],
+  "author": "Parsa Asadi,Maede Karimi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Star-Academy/Summer1400-FE-Team1/issues"
+  },
+  "homepage": "https://github.com/Star-Academy/Summer1400-FE-Team1#readme",
+  "devDependencies": {
+    "sass": "^1.36.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
