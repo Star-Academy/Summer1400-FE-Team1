@@ -7,10 +7,40 @@
     <title>ورود</title>
     <link rel="stylesheet" href="../style/css/Colors.css">
     <link rel="stylesheet" href="../style/css/Login.css">
+    <link rel="stylesheet" href="../style/css/Header.css">
+    <link rel="stylesheet" href="../style/css/Footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <header></header>
+    <header>
+        <div class="header_content">
+            <a class="hamburger">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <div class="logo"><a href="/">آهنگ باز</a></div>
+            <nav class="main_nav">
+                <ul>
+                    <li class="active"><a href="./LandingPage.html">خانه</a></li>
+                    <li><a href="./MusicPage.html">آهنگ ها</a></li>
+                    <li><a href="#">خوانندگان</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                </ul>
+            </nav>
+            <div class="log_reg">
+                <ul>
+                    <li><a href="./LoginPage.html">ورود</a></li>
+                    <li><a href="./SignUpPage.html">ثبت نام</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    
     <main>
+        <div class="alternative"></div>
         <div class="form">
             <form action="">
                 <div class="form__name">
@@ -30,5 +60,32 @@
             </form>
         </div>
     </main>
+    <footer class="flex-rw">
+        <section class="footer-social flex-rw">
+            <span class="footer-social-overlap footer-social-connect">
+                تماس <span class="footer-social-small">با</span> ما
+            </span>
+            <span class="footer-social-overlap footer-social-icons-wrapper">
+                <a href="#" class="anchor">
+                    <i class="material-icons" style="font-size:24px;">account_balance</i>
+                </a>
+                <a href="#" class="anchor">
+                    <i class="material-icons" style="font-size:24px;">cloud</i>
+                </a>
+                <a href="#" class="anchor">
+                    <i class="material-icons" style="font-size:24px;">email</i>
+                </a>
+                <a href="#" class="anchor">
+                    <i class="material-icons" style="font-size:24px;">subscriptions</i>
+                </a>
+            </span>
+        </section>
+        <section class="footer-bottom-section flex-rw">
+            <div class="footer-bottom-wrapper">
+                <i class="fa fa-copyright" role="copyright">
+                    Summer 2021 - codestar academy</i>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

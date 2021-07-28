@@ -1,6 +1,9 @@
 body {
   height: 100vh;
 }
+body .temp {
+  height: 100vh;
+}
 body main {
   display: block;
 }
@@ -309,7 +312,7 @@ body main .music__container details::-webkit-scrollbar {
     background-color: var(--color-gray-20);
     font-size: 2.5rem;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 }
 body main .music__container details summary {
@@ -322,7 +325,7 @@ body main .music__container details summary {
     background-color: var(--color-gray-20);
     font-size: 2.5rem;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 }
 body main .music__container details[open] {
@@ -354,7 +357,7 @@ body main .music__container details[open]::-webkit-scrollbar {
     background-color: var(--color-gray-20);
     font-size: 2.5rem;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 }
 body main .music__container details[open] summary {
@@ -367,7 +370,7 @@ body main .music__container details[open] summary {
     background-color: var(--color-gray-20);
     font-size: 2.5rem;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 }
 
