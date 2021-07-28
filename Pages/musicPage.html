@@ -1,79 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>آهنگ ها </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/css/Header.css">
+    <link rel="stylesheet" href="../style/css/Footer.css">
+    <link rel="stylesheet" href="../style/css/Landing.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
+
 <body>
-    <header></header>
-    <main>
-        <section class="new-musics">
-            <div class="music-cart">
-                <h2>اهنگ های جدید </h2>
-            <article class="new-musics-part">
+    <header>
+        <div class="header_content">
+            <a class="hamburger">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <div class="logo"><a href="/">آهنگ باز</a></div>
+            <nav class="main_nav">
                 <ul>
-                    <li>
-                        <img src="" alt="" class="music-img">
-                        <h2 class="music-name">اسم آهنگ </h2>
-                        <h3 class="singer-name">نام خواننده </h3>
-                        <h6 class="relase-date">تاریخ نشر</h6>
-                        <div class="Rate">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <input type="button" value="play">
-                        <input type="button" value="like">
-                        <a href="./MusicInfoPage.html" class="music-info">جزئیات آهنگ</a>
-                    </li>
+                    <li class="active"><a href="./LandingPage.html">خانه</a></li>
+                    <li><a href="./MusicPage.html">آهنگ ها</a></li>
+                    <li><a href="#">خوانندگان</a></li>
+                    <li><a href="#">درباره ما</a></li>
                 </ul>
-            </article>
+            </nav>
+            <div class="log_reg">
+                <ul>
+                    <li><a href="./LoginPage.html">ورود</a></li>
+                    <li><a href="./SignUpPage.html">ثبت نام</a></li>
+                </ul>
             </div>
-        </section>
-        <section class="suggestion">
-            <div class="music-cart">
-                <h2>پیشنهادی امروز</h2>
-                <article class="suggest-musics-part">
-                    <ul>
-                        <li>
-                            <img src="" alt="" class="music-img">
-                            <h2 class="music-name">اسم آهنگ </h2>
-                            <h3 class="singer-name">نام خواننده </h3>
-                            <h6 class="relase-date">تاریخ نشر</h6>
-                            <div class="Rate">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
+        </div>
+    </header>
+    <div class="alternative"></div>
+    <main>
+        <section class="music-section">
+            <h2 class="section-title">آهنگ های محبوب امروز</h2>
+            <ul class="cards-container">
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
                             </div>
-                            <input type="button" value="play">
-                            <input type="button" value="like">
-                            <a href="./MusicInfoPage.html" class="music-info">جزئیات آهنگ</a>
-                        </li>
-                    </ul>
-                </article>
-            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a class="more" href="./MusicPage.html">بیشتر</a>
         </section>
-        <section class="artits">
-            <div class="artist-show">
-                <h2>هنرمندان </h2>
-                <article class="artis-section">
-                    <ul>
-                        <li>
-                            <img src="" alt="" class="artist-img">
-                            <h3 class="arist-name">علی زند وکیلی  </h3>
-                            <a href="" class="artist-musics">دیدن آهنگ ها </a>
-                        </li>
-                    </ul>
-                </article>
-            </div>
+        <section class="music-section">
+            <h2 class="section-title"> آهنگ های پیشنهادی </h2>
+            <ul class="cards-container">
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a class="more" href="./MusicPage.html">بیشتر</a>
+        </section>
+        <section class="music-section">
+            <h2 class="section-title"> آهنگ های جدید </h2>
+            <ul class="cards-container">
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آهنگ </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a class="more" href="./MusicPage.html">بیشتر</a>
+        </section>
+        <section class="music-section">
+            <h2 class="section-title"> آلبوم های جدید </h2>
+            <ul class="cards-container">
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آلبوم </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آلبوم </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آلبوم </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آلبوم </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آلبوم </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./MusicInfoPage.html?:{musicId}" class="music-link">
+                        <div class="music-card">
+                            <img src="../Assets/Temp/example.jpg" alt="" class="music-img">
+                            <div class="info">
+                                <h2 class="music-name">اسم آلبوم </h2>
+                                <h3 class="singer-name">نام خواننده </h3>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a class="more" href="./MusicPage.html">بیشتر</a>
+        </section>
+        <section class="music-section">
+            <h2 class="section-title">هنرمندان</h2>
+            <ul class="cards-container">
+                <li>
+                    <div class="artist-card">
+                        <img src="../Assets/Temp/artist.png" alt="artist" class="artist-img">
+                        <h3 class="singer-name">اسم خواننده </h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="artist-card">
+                        <img src="../Assets/Temp/artist.png" alt="artist" class="artist-img">
+                        <h3 class="singer-name">اسم خواننده </h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="artist-card">
+                        <img src="../Assets/Temp/artist.png" alt="artist" class="artist-img">
+                        <h3 class="singer-name">اسم خواننده </h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="artist-card">
+                        <img src="../Assets/Temp/artist.png" alt="artist" class="artist-img">
+                        <h3 class="singer-name">اسم خواننده </h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="artist-card">
+                        <img src="../Assets/Temp/artist.png" alt="artist" class="artist-img">
+                        <h3 class="singer-name">اسم خواننده </h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="artist-card">
+                        <img src="../Assets/Temp/artist.png" alt="artist" class="artist-img">
+                        <h3 class="singer-name">اسم خواننده </h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="artist-card">
+                        <img src="../Assets/Temp/artist.png" alt="artist" class="artist-img">
+                        <h3 class="singer-name">اسم خواننده </h3>
+                    </div>
+                </li>
+            </ul>
+            <a class="more" href="./MusicPage.html">بیشتر</a>
         </section>
     </main>
+    <footer class="flex-rw">
+        <section class="footer-social flex-rw">
+            <span class="footer-social-overlap footer-social-connect">
+                تماس <span class="footer-social-small">با</span> ما
+            </span>
+            <span class="footer-social-overlap footer-social-icons-wrapper">
+                <a href="#" class="anchor">
+                    <i class="material-icons" style="font-size:24px;">account_balance</i>
+                </a>
+                <a href="#" class="anchor">
+                    <i class="material-icons" style="font-size:24px;">cloud</i>
+                </a>
+                <a href="#" class="anchor">
+                    <i class="material-icons" style="font-size:24px;">email</i>
+                </a>
+                <a href="#" class="anchor">
+                    <i class="material-icons" style="font-size:24px;">subscriptions</i>
+                </a>
+            </span>
+        </section>
+        <section class="footer-bottom-section flex-rw">
+            <div class="footer-bottom-wrapper">
+                <i class="fa fa-copyright" role="copyright">
+                    Summer 2021 - codestar academy</i>
+            </div>
+        </section>
+    </footer>
 </body>
+
 </html>
