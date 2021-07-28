@@ -2,38 +2,30 @@
     main {
         @include backcolor;
         .form{
-            @media (min-width:1200px){
-                height: 40%;
-            }
             display: grid;
+            min-height: 87vh;
             form{
                 display: grid;
-                grid-template-rows: repeat(#{$gridrow}, 1fr);
                 align-items: stretch;
                 grid-auto-columns: auto;
-                grid-auto-rows: minmax(40px auto);
                 place-self: center;
-                padding: 2rem 2rem 2rem 2rem;
-                row-gap: 1rem;
+                padding: 1rem;
                 width: 100%;
-                height: 100vh;
-                @media (min-width:1200px){
+                max-width: 40rem;
+                border-radius: 1rem;
+                @media (min-width:768px){
                     background-color: var(--color-gray-08);
                     box-shadow: 2px 2px 30px var(--color-gray-50);
-                    width: 80%;
-                    // height: 80%;
                     opacity: 0.79;
-                    margin: 10rem auto;
                 }
                 h1:first-of-type{
                     color: var(--color-purple-06);
                 }
                 .form__name{
                     justify-self: center;
-                    margin-top: 7rem;
-                    font-size: 7rem;
+                    font-size: 5rem;
                     @media (min-width:425px){
-                        font-size: 9rem;
+                        font-size: 6rem;
                     }
                 }
                 .form__fields{
@@ -48,11 +40,11 @@
                         border-radius: 0.5rem;
                         color: var(--color-black);
                         text-align: center;
-                        margin: 1rem auto;
-                        font-size: 1.3rem;
+                        margin: 0.1rem auto;
+                        font-size: 1rem;
                         transition: .3s linear;
                         @media (min-width:425px){
-                            font-size: 2rem;
+                            font-size: 1.6rem;
                         }
                     }
                     &:focus{
@@ -60,9 +52,6 @@
                     }
                     label{
                         opacity: 0;
-                        // @media (min-width:1200px){
-                        //     opacity: 1 ;
-                        // }
                     }
                 }
                 .signUp , .login , .send-email{
@@ -77,27 +66,30 @@
                         font-size: 1.3rem;
                         margin-top: 0.6rem;
                         text-align: center;
+                        &:hover{
+                            color:var(--color-purple-06);
+                        }
                         @media (min-width:425px){
-                            font-size: 1.7rem;
+                            font-size: 1.5rem;
                         }
                     }
                     [type="submit"]{
-                        margin:0 auto;
+                        margin:1rem auto;
                         display:block;
-                        background-color: var(--color-purple-10);
+                        background-color: var(--color-purple-08);
                         color: var(--color-white);
-                        width: 80%;
+                        width: 60%;
                         border: none;
                         border-radius: 2rem;
                         height: $inheight +1vh;
-                        font-size: 2rem;
+                        font-size: 1.5rem;
                         @media (min-width:425px){
-                            font-size: 2.5rem;
+                            font-size: 2rem;
                         }
                     }
                     input:hover{
                         cursor: pointer;
-                        background-color: var(--color-purple-05);
+                        background-color: var(--color-purple-16);
                     }
                 }
             }

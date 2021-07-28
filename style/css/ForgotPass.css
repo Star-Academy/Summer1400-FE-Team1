@@ -11,31 +11,23 @@ main {
 }
 main .form {
   display: grid;
-}
-@media (min-width: 1200px) {
-  main .form {
-    height: 40%;
-  }
+  min-height: 87vh;
 }
 main .form form {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
   align-items: stretch;
   grid-auto-columns: auto;
-  grid-auto-rows: minmax(40px auto);
   place-self: center;
-  padding: 2rem 2rem 2rem 2rem;
-  row-gap: 1rem;
+  padding: 1rem;
   width: 100%;
-  height: 100vh;
+  max-width: 40rem;
+  border-radius: 1rem;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   main .form form {
     background-color: var(--color-gray-08);
     box-shadow: 2px 2px 30px var(--color-gray-50);
-    width: 80%;
     opacity: 0.79;
-    margin: 10rem auto;
   }
 }
 main .form form h1:first-of-type {
@@ -43,12 +35,11 @@ main .form form h1:first-of-type {
 }
 main .form form .form__name {
   justify-self: center;
-  margin-top: 7rem;
-  font-size: 7rem;
+  font-size: 5rem;
 }
 @media (min-width: 425px) {
   main .form form .form__name {
-    font-size: 9rem;
+    font-size: 6rem;
   }
 }
 main .form form .form__fields {
@@ -59,18 +50,18 @@ main .form form .form__fields {
 main .form form .form__fields > input {
   display: block;
   width: 80%;
-  height: 6.5vh;
+  height: 5vh;
   border: none;
   border-radius: 0.5rem;
   color: var(--color-black);
   text-align: center;
-  margin: 1rem auto;
-  font-size: 1.3rem;
+  margin: 0.1rem auto;
+  font-size: 1rem;
   transition: 0.3s linear;
 }
 @media (min-width: 425px) {
   main .form form .form__fields > input {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 main .form form .form__fields:focus {
@@ -93,30 +84,33 @@ main .form form .signUp > a, main .form form .login > a, main .form form .send-e
   margin-top: 0.6rem;
   text-align: center;
 }
+main .form form .signUp > a:hover, main .form form .login > a:hover, main .form form .send-email > a:hover {
+  color: var(--color-purple-06);
+}
 @media (min-width: 425px) {
   main .form form .signUp > a, main .form form .login > a, main .form form .send-email > a {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 }
 main .form form .signUp [type=submit], main .form form .login [type=submit], main .form form .send-email [type=submit] {
-  margin: 0 auto;
+  margin: 1rem auto;
   display: block;
-  background-color: var(--color-purple-10);
+  background-color: var(--color-purple-08);
   color: var(--color-white);
-  width: 80%;
+  width: 60%;
   border: none;
   border-radius: 2rem;
-  height: 7.5vh;
-  font-size: 2rem;
+  height: 6vh;
+  font-size: 1.5rem;
 }
 @media (min-width: 425px) {
   main .form form .signUp [type=submit], main .form form .login [type=submit], main .form form .send-email [type=submit] {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 main .form form .signUp input:hover, main .form form .login input:hover, main .form form .send-email input:hover {
   cursor: pointer;
-  background-color: var(--color-purple-05);
+  background-color: var(--color-purple-16);
 }
 
 /*# sourceMappingURL=ForgotPass.css.map */

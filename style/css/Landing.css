@@ -57,7 +57,7 @@
 }
 
 .music-section {
-  min-height: 30vh;
+  min-height: 35vh;
   width: 100%;
   padding: 2rem 6rem;
   background-color: rgba(0, 0, 0, 0.6);
@@ -71,7 +71,7 @@
   display: none;
 }
 @media (max-width: 572px) {
-  .music-section li:nth-child(-n+3) {
+  .music-section li:nth-child(n+3) {
     display: none;
   }
 }
@@ -87,9 +87,10 @@
   margin-bottom: 1rem;
 }
 .music-section .music-card {
+  border-radius: 2rem;
   background-color: var(--color-black);
-  min-width: 18rem;
-  min-height: 18rem;
+  min-width: 22rem;
+  min-height: 22rem;
   max-width: 20rem;
   text-align: right;
   margin: 0.2rem 2.1rem;
@@ -100,15 +101,24 @@
   text-decoration: none;
   color: #fff;
 }
+@media (max-width: 1024px) {
+  .music-section .music-card {
+    min-width: 18rem;
+    min-height: 18rem;
+  }
+}
 @media (max-width: 572px) {
   .music-section .music-card {
     margin: 0.5rem 0.2rem;
+    min-width: 19rem;
+    min-height: 19rem;
   }
 }
 .music-section .music-card img {
   max-height: 18rem;
   width: 100%;
   opacity: 1;
+  border-top-left-radius: 2rem;
 }
 @media (max-width: 572px) {
   .music-section .music-card img {
@@ -156,12 +166,16 @@
 }
 .music-section .cards-container .artist-card {
   background-color: var(--color-black);
-  min-width: 18rem;
-  min-height: 18rem;
+  min-width: 19rem;
+  min-height: 19rem;
   text-align: right;
   margin: 0 2rem;
   cursor: pointer;
   border: 0.5rem var(--color-black) solid;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 2rem;
 }
 @media (max-width: 572px) {
   .music-section .cards-container .artist-card {
@@ -170,8 +184,10 @@
 }
 .music-section .cards-container .artist-card img {
   max-height: 15rem;
+  height: 100%;
   opacity: 1;
-  width: 100%;
+  width: auto;
+  border-top-left-radius: 2rem;
 }
 .music-section .cards-container .artist-card .singer-name {
   margin: 0 1.2rem;
@@ -198,7 +214,7 @@ body {
   align-items: center;
   justify-content: flex-end;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 692px) {
   .banner {
     top: 15%;
     justify-content: center;
@@ -209,15 +225,18 @@ body {
   position: absolute;
   top: 50%;
   right: 20%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 692px) {
   .banner .content {
     top: 15%;
     right: 15%;
+    background-color: transparent;
   }
 }
 @media screen and (max-width: 450px) {
@@ -228,14 +247,11 @@ body {
 .banner .content .title {
   font-size: 3rem;
 }
-.banner .content .subTitle {
-  font-size: 2rem;
-}
 .banner .content .btns {
   cursor: pointer;
   width: 15rem;
   border-radius: 50rem;
-  background-color: var(--color-purple-09);
+  background-color: var(--color-purple-08);
   margin: 1rem 0;
   padding: 1rem;
 }
@@ -245,10 +261,13 @@ body {
   color: var(--color-white);
   text-decoration: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 692px) {
   .banner .content .btns {
     margin: 38rem 0;
   }
+}
+.banner .content .btns:hover {
+  background-color: var(--color-purple-16);
 }
 
 /*# sourceMappingURL=Landing.css.map */

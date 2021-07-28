@@ -1,6 +1,6 @@
 @use './Colors.scss';
 .music-section{
-    min-height: 30vh;
+    min-height: 35vh;
     width: 100%;
     padding:2rem 6rem;
     background-color: rgba(0, 0, 0, 0.6);;
@@ -13,7 +13,7 @@
         display: none;
     }
     @media (max-width: 572px) {
-        li:nth-child(-n+3){
+        li:nth-child(n+3){
             display: none;
         }
     }
@@ -33,14 +33,21 @@
             text-decoration: none;
             color:#fff;
         }
+        border-radius: 2rem;
         background-color: var(--color-black);
-        min-width: 18rem;
-        min-height: 18rem;
+        min-width: 22rem;
+        min-height: 22rem;
+         @media (max-width: 1024px) {
+            min-width: 18rem;
+            min-height: 18rem;
+        }
         max-width: 20rem;
         text-align: right;
         margin:0.2rem 2.1rem;
         @media (max-width: 572px) {
             margin: .5rem 0.2rem;
+            min-width: 19rem;
+            min-height: 19rem;
         }
         cursor: pointer;
         border:0.1rem var(--color-black) solid;
@@ -48,6 +55,7 @@
             max-height: 18rem;
             width: 100%;
             opacity: 1;
+            border-top-left-radius: 2rem;
             @media (max-width: 572px) {
                height: auto;
             }
@@ -92,19 +100,25 @@
         }
         .artist-card{
             background-color: var(--color-black);
-            min-width: 18rem;
-            min-height: 18rem;
+            min-width: 19rem;
+            min-height: 19rem;
             text-align: right;
             margin:0 2rem;
-               @media (max-width: 572px) {
+            @media (max-width: 572px) {
                 margin: .5rem 0;
             }
             cursor: pointer;
             border:0.5rem var(--color-black) solid;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            border-top-left-radius: 2rem;
             img{
                 max-height: 15rem;
+                height: 100%;
                 opacity: 1;
-                width: 100%;
+                width: auto;
+                border-top-left-radius: 2rem;
             }
             .singer-name {
                 margin:0 1.2rem;

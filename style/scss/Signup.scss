@@ -2,20 +2,20 @@
 @include SLF.same-for-signup-login-forgotpass(5,4);
 form{
     .form__radio{
-        margin-top: -3rem;
+        margin:1rem 0;
         width: 100%;
         place-self: center;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        column-gap: 1.2rem;
-        row-gap: 2rem;
+        column-gap: .2rem;
+        row-gap: 0.5rem;
         label:first-of-type{
             grid-column: 1/5;
             place-self: center;
         }
         > label{
             color: var(--color-white);
-            font-size: 2rem;
+            font-size: 1.6rem;
             place-self: end;
             text-align: center;
             
