@@ -19,7 +19,7 @@ main .form {
 }
 main .form form {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   align-items: stretch;
   grid-auto-columns: auto;
   grid-auto-rows: minmax(40px auto);
@@ -119,27 +119,4 @@ main .form form .signUp input:hover, main .form form .login input:hover, main .f
   background-color: var(--color-purple-05);
 }
 
-form .form__radio {
-  margin-top: -3rem;
-  width: 100%;
-  place-self: center;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 1.2rem;
-  row-gap: 2rem;
-}
-form .form__radio label:first-of-type {
-  grid-column: 1/5;
-  place-self: center;
-}
-form .form__radio > label {
-  color: var(--color-white);
-  font-size: 2rem;
-  place-self: end;
-  text-align: center;
-}
-form .form__radio > input {
-  place-self: start;
-}
-
-/*# sourceMappingURL=Signup.css.map */
+/*# sourceMappingURL=Login.css.map */
