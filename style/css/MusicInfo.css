@@ -81,7 +81,7 @@ body main .music__container .music__content .volume__container img {
 }
 body main .music__container .music__content .volume__container #vol {
   height: 0.2rem;
-  width: 100rem;
+  width: 80%;
   -webkit-appearance: none;
   z-index: 100;
   position: relative;
@@ -210,7 +210,7 @@ body main .music__container .music__content .current__time {
 body main .music__container .music__content .current__time input {
   grid-column: 1/3;
   height: 0.2rem;
-  width: 100rem;
+  width: 80%;
   -webkit-appearance: none;
   z-index: 100;
   position: relative;
