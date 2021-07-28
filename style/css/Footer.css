@@ -57,7 +57,7 @@
 }
 
 footer {
-  background: var(--color-gray-10);
+  background: var(--color-gray-08);
   width: 100%;
   padding: 2rem;
 }
@@ -98,7 +98,7 @@ footer .footer-social::after {
 footer .footer-social-overlap {
   position: relative;
   z-index: 2;
-  background: var(--color-gray-10);
+  background: var(--color-gray-08);
   padding: 0 2rem;
 }
 footer .footer-social-connect {
