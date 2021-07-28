@@ -2,7 +2,6 @@
     width: 7vw;
     height: 7vw;
     margin: 0 0.8rem;
-    // padding-top: 1.6rem;
     cursor: pointer;
     @media (min-width:725px){
         width: 2.5rem;
@@ -12,7 +11,6 @@
         width: 4rem;
         height: 4rem;
     }
-
 }
 @mixin sidebar{
     height: 0.2rem;
@@ -42,17 +40,21 @@
     height: 4rem;
     margin:0 3vw;
 }
-@mixin color-size-detail-1200{
-    @media (min-width:1200px){
+@mixin color-size-detail-725{
+    @media (min-width:725px){
             background-color: var(--color-gray-20);
             font-size: 2.5rem;
+            margin-top: 10px;
+            margin-bottom: 10px;
     }
 }
 @mixin detail{
+    position: fixed;
         &::-webkit-scrollbar{
             display: block;
         }
         z-index: 4;
+        bottom: 0;
         text-align: center;
         width: 100%;
         font-size:2vw;
@@ -62,29 +64,34 @@
             width: 500px;
             text-align: center;
         }
-        @include color-size-detail-1200;
-        margin-top: 3rem;
+        @include color-size-detail-725;
+        border-radius: 10px;
         summary{
-            // position: sticky;
-            left: 50%;
+            margin-bottom: 15px;
             font-size: 4vw;
             height: 2rem;
-            margin-bottom: 2.5vw;
-            @include color-size-detail-1200()
+            @include color-size-detail-725;
         }
 }
-main{
-    .music__container{
-        // position: fixed;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        width: 100%;
-        height: 100vh;
+body{
+    height: 100vh;
+    main{
+        display: block;
+        .music__container{
+            position: fixed;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            @media (min-width:1200px){
+                width: 70%;
+                left: 15%;
+            }
         .music__content{
             width:100%;
-            position: absolute;
-            height:100vh;
+            position: relative;
+            height:100%;
             overflow: hidden;
             .img--back{
                 .back__music__img{
@@ -121,7 +128,7 @@ main{
                 z-index: 3;
                 width: 100%;
                 height: 2rem;
-                margin-top: 3.5rem;
+                margin-top: 3.5vw;
                 img{
                     @include volume-icons;
                 }
@@ -142,14 +149,15 @@ main{
                     border-radius: 50%;
                     width: 20rem ;
                     height: 20rem;
+                    border: 0.2rem solid var(--color-white);
                     @media (min-width: 725px){
                         width: 30rem;
                         height: 30rem;
+                        border: 0.3rem solid var(--color-white);
                     }
-                    border: 0.2rem solid var(--color-white);
                 }
                 .title__artist{
-                    @media (min-width:1200px){
+                    @media (min-width:725px){
                         padding-top: 6rem;
                     }
                     color: whitesmoke;
@@ -179,17 +187,12 @@ main{
                 position: relative;
                 width: 90%;
                 height: 4rem;
-                // background-color: whitesmoke;
                 z-index: 3;
-                // left: auto;
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
-                // top: -5%;
                 margin: 2rem auto;
                 span{
-                    // background-color: chartreuse;
-                    // background-color: yellow;
                     width: 5rem;
                     height: 5rem;
                     font-size: 3rem;
@@ -209,7 +212,6 @@ main{
                 grid-template-columns: repeat(2,1fr);
                 justify-content: space-around;
                 place-items: center;
-                // top: -10%;
                 margin-top: 3rem;
                 color: var(--color-white);
                 font-size: 2.5rem;
@@ -217,17 +219,14 @@ main{
                     font-size: 4rem;
                 }
                 input{
-                    // position: fixed;
                     grid-column: 1/3;
                     @include sidebar;
                     height: 0.6rem;
-                    width: 65vw;
                     margin-bottom: 0.7rem;
                 }
             }
             .btns{
                 position: relative;
-                // top: -8%;
                 margin: 2rem auto;
                 display: flex;
                 align-content: space-around ;
@@ -236,7 +235,6 @@ main{
                 height: 5rem;
                 z-index: 3;
                 .controls{
-                    // width: 10rem;
                     display: inline-block;
                     margin: 0 1rem;
                     @media (min-width:725px){
@@ -244,56 +242,39 @@ main{
                     }
                     button{
                         @include repeat-like;
-                        // width: 8rem;
-                        // height:8rem;
-                        
-                        // @media (min-width:725px){
-                            //     width: 12rem ;
-                            //     height: 6rem;
-                            // }
-                            // @media (min-width:1200px){
-                                //     width: 10rem;
-                                //     height: 10rem;
-                                // }
-                        span{
-                            color: var(--color-white);
-                            font-size: 10vw;
-                            @media (min-width:1200px){
-                            font-size: 7rem;
+                                span{
+                                    color: var(--color-white);
+                                    font-size: 10vw;
+                                    @media (min-width:1200px){
+                                        font-size: 7rem;
+                                    }
+                                }
+                            }
                         }
-                        }
-                    }
-                }
-                button{
-                    @include repeat-like;
-                    span{
-                        color: var(--color-white);
-                        font-size: 7vw;
-                        @media (min-width:1200px){
-                            font-size: 7rem;
+                        button{
+                            @include repeat-like;
+                            span{
+                                color: var(--color-white);
+                                font-size: 7vw;
+                                @media (min-width:1200px){
+                                    font-size: 7rem;
+                                }
+                            }
                         }
                     }
                 }
-            }
-        }
-        details{
-            position: absolute;
-            height: 4vh;
-            @include detail;
-            @media (min-width:725px){
-                border-radius: 999px;
-            }
-            details[open]{
-                // position: fixed;
-                position: fixed;
-                bottom: 0;
-                @media (min-width:725px){
-                    border-radius: 10px;
+                details{
+                    height: 4vh;
+                    @include detail;
                 }
-                overflow: scroll;
-                height: 15vh;
-                @include detail;
+                details[open]{
+                    position: fixed;
+                    bottom: 0;
+                    overflow: scroll;
+                    height: 15vh;
+                    @include detail;
+                }
             }
         }
+        
     }
-}
