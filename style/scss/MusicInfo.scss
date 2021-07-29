@@ -3,14 +3,14 @@
     src: url('../../Assets/Fonts/VarelaRound-Regular.ttf');
 }
 
-@mixin volume-icons{
+@mixin volume-star-icons{
     width: 2rem;
     height: 2rem;
     margin: 0 0.8rem;
     cursor: pointer;
     @media (min-width:725px){
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 4rem;
+        height: 4rem;
     }
 }
 @mixin sidebar{
@@ -129,7 +129,7 @@ body{
                 width: 100%;
                 margin-top: 1vw;
                 img{
-                    @include volume-icons;
+                    @include volume-star-icons;
                 }
                 #vol{
                     @include sidebar;
@@ -189,15 +189,12 @@ body{
                 align-items: center;
                 justify-content: space-around;
                 margin: 3rem auto 0 auto;
-                span{
-                    width: 5rem;
-                    height: 5rem;
-                    font-size: 3rem;
-                    color: var(--color-white);
+                .stars{
+                     @include volume-star-icons;
                 }
                 #speaker{
                     img{
-                        @include volume-icons;
+                        @include volume-star-icons;
                     }
                 }
             }
@@ -239,22 +236,23 @@ body{
                     }
                     button{
                         @include repeat-like;
-                                span{
-                                    color: var(--color-white);
-                                    font-size: 4rem;
+                                img{
+                                    width: 3rem;
+                                    @media (min-width:725px){
+                                        width: 6rem;
+                                    }
                                 }
                             }
                         }
-                        button{
-                            @include repeat-like;
-                            span{
-                                color: var(--color-white);
-                                font-size: 4rem;
-                                @media (min-width:1200px){
-                                    font-size: 4rem;
-                                }
-                            }
+                .btn--like , #repeat{
+                    @include repeat-like;
+                    img{
+                        width: 3rem;
+                        @media (min-width:725px){
+                            width: 4rem;
                         }
+                    }
+                }
                     }
                 }
                 details{

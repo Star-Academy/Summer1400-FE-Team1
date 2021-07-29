@@ -77,8 +77,8 @@ body main .music__container .music__content .volume__container img {
 }
 @media (min-width: 725px) {
   body main .music__container .music__content .volume__container img {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 4rem;
+    height: 4rem;
   }
 }
 body main .music__container .music__content .volume__container #vol {
@@ -164,11 +164,17 @@ body main .music__container .music__content .rate {
   justify-content: space-around;
   margin: 3rem auto 0 auto;
 }
-body main .music__container .music__content .rate span {
-  width: 5rem;
-  height: 5rem;
-  font-size: 3rem;
-  color: var(--color-white);
+body main .music__container .music__content .rate .stars {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.8rem;
+  cursor: pointer;
+}
+@media (min-width: 725px) {
+  body main .music__container .music__content .rate .stars {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 body main .music__container .music__content .rate #speaker img {
   width: 2rem;
@@ -178,8 +184,8 @@ body main .music__container .music__content .rate #speaker img {
 }
 @media (min-width: 725px) {
   body main .music__container .music__content .rate #speaker img {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 4rem;
+    height: 4rem;
   }
 }
 body main .music__container .music__content .current__time {
@@ -248,24 +254,27 @@ body main .music__container .music__content .btns .controls button {
   height: 4rem;
   margin: 0 3vw;
 }
-body main .music__container .music__content .btns .controls button span {
-  color: var(--color-white);
-  font-size: 4rem;
+body main .music__container .music__content .btns .controls button img {
+  width: 3rem;
 }
-body main .music__container .music__content .btns button {
+@media (min-width: 725px) {
+  body main .music__container .music__content .btns .controls button img {
+    width: 6rem;
+  }
+}
+body main .music__container .music__content .btns .btn--like, body main .music__container .music__content .btns #repeat {
   background-color: transparent;
   border: none;
   align-self: center;
   height: 4rem;
   margin: 0 3vw;
 }
-body main .music__container .music__content .btns button span {
-  color: var(--color-white);
-  font-size: 4rem;
+body main .music__container .music__content .btns .btn--like img, body main .music__container .music__content .btns #repeat img {
+  width: 3rem;
 }
-@media (min-width: 1200px) {
-  body main .music__container .music__content .btns button span {
-    font-size: 4rem;
+@media (min-width: 725px) {
+  body main .music__container .music__content .btns .btn--like img, body main .music__container .music__content .btns #repeat img {
+    width: 4rem;
   }
 }
 body main .music__container details {
