@@ -1,30 +1,31 @@
+@font-face {
+    font-family: VarelaRound-Regular;
+    src: url('../../Assets/Fonts/VarelaRound-Regular.ttf');
+}
+
 @mixin volume-icons{
-    width: 7vw;
-    height: 7vw;
+    width: 2rem;
+    height: 2rem;
     margin: 0 0.8rem;
     cursor: pointer;
     @media (min-width:725px){
         width: 2.5rem;
         height: 2.5rem;
     }
-    @media (min-width:1200px){
-        width: 4rem;
-        height: 4rem;
-    }
 }
 @mixin sidebar{
     height: 0.2rem;
-    width: 80%;
+    width: 60%;
     -webkit-appearance: none;
     z-index: 100;
     position: relative;
     background-color:var(--color-purple-06);
     &::-webkit-slider-thumb{
         -webkit-appearance: none;
-        width: 1.3rem;
-        height: 1.3rem;
+        width: 1rem;
+        height: 1rem;
         background-color: var(--color-white);
-        border-radius: 999rem;
+        border-radius: 50%;
         cursor: pointer;
         transform: scale(1);
     }
@@ -36,16 +37,12 @@
     background-color: transparent;
     border: none;
     align-self: center;
-    width: 3rem;
     height: 4rem;
     margin:0 3vw;
 }
 @mixin color-size-detail-725{
     @media (min-width:725px){
             background-color: var(--color-gray-20);
-            font-size: 2.5rem;
-            margin-top: 10px;
-            margin-bottom: 30px;
     }
 }
 @mixin detail{
@@ -57,19 +54,17 @@
         bottom: 0;
         text-align: center;
         width: 100%;
-        font-size:2vw;
+        font-size:2rem;
         color: var(--color-white);
         background-color:var(--color-purple-07);
         @media (min-width:725px){
-            width: 500px;
             text-align: center;
         }
         @include color-size-detail-725;
         border-radius: 10px;
         summary{
-            margin-bottom: 15px;
-            font-size: 4vw;
-            height: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
             @include color-size-detail-725;
         }
 }
@@ -80,6 +75,8 @@ body{
     }
     main{
         display: block;
+        width: 100%;
+        height: 100%;
         .music__container{
             position: fixed;
             display: flex;
@@ -88,8 +85,8 @@ body{
             width: 100%;
             height: 100vh;
             @media (min-width:1200px){
-                width: 70%;
-                left: 15%;
+                left: 50%;
+                transform: translate(-50%,0);
             }
         .music__content{
             width:100%;
@@ -100,14 +97,14 @@ body{
                 .back__music__img{
                     position: fixed;
                     background-repeat: repeat;
-                    width: 140%;
+                    width: 100%;
                     height: 100vh;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%,-50%);
                     z-index: 1;
-                    filter: blur(3px);
-                    -webkit-filter: blur(3px);
+                    filter: blur(2px);
+                    -webkit-filter: blur(2px);
                 }
                 .blacklayer{
                     position: relative;
@@ -119,7 +116,7 @@ body{
                     opacity: 0.4;
                     background-size: cover;
                     @media (min-width:1200px){
-                        opacity: 0.8;
+                        opacity: 0.7;
                     }
                 }
             }
@@ -130,8 +127,7 @@ body{
                 position: relative;
                 z-index: 3;
                 width: 100%;
-                height: 2rem;
-                margin-top: 3.5vw;
+                margin-top: 1vw;
                 img{
                     @include volume-icons;
                 }
@@ -154,47 +150,45 @@ body{
                     height: 20rem;
                     border: 0.2rem solid var(--color-white);
                     @media (min-width: 725px){
-                        width: 30rem;
-                        height: 30rem;
                         border: 0.3rem solid var(--color-white);
                     }
                 }
                 .title__artist{
                     @media (min-width:725px){
-                        padding-top: 6rem;
+                        padding-top: 2rem;
                     }
                     color: whitesmoke;
                     position: relative;
                     height: 3.5rem;
-                    padding: 0 2.5rem;
+                    padding: 0 6rem;
                     top:75%;
                     text-align: center;
                     h2{
                         font-size: 2.3rem;
+                        font-family: VarelaRound-Regular, sans-serif;
                         @media (min-width:1200px){
                             font-size: 3rem;
                         } 
                     }
                     h4{
                         font-size: 1.8rem;
+                        font-family: VarelaRound-Regular, sans-serif;
                         @media (min-width:1200px){
                             font-size: 2.3rem;
                         }
-                    }
-                    @media (min-width:725px){
-                        top: 62%;
                     }
                 }
             }
             .rate{
                 position: relative;
                 width: 90%;
-                height: 4rem;
+                max-width: 20rem;
+                height: 2rem;
                 z-index: 3;
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
-                margin: 2rem auto;
+                margin: 3rem auto 0 auto;
                 span{
                     width: 5rem;
                     height: 5rem;
@@ -215,11 +209,12 @@ body{
                 grid-template-columns: repeat(2,1fr);
                 justify-content: space-around;
                 place-items: center;
+                align-items: center;
                 margin-top: 3rem;
                 color: var(--color-white);
                 font-size: 2.5rem;
                 @media (min-width:1200px){
-                    font-size: 4rem;
+                    font-size: 3rem;
                 }
                 input{
                     grid-column: 1/3;
@@ -230,27 +225,23 @@ body{
             }
             .btns{
                 position: relative;
-                margin: 2rem auto;
+                margin: 1.2rem auto;
                 display: flex;
                 align-content: space-around ;
                 justify-content: center;
                 width: 100%;
-                height: 5rem;
                 z-index: 3;
                 .controls{
-                    display: inline-block;
-                    margin: 0 1rem;
+                    display: flex;
+                    margin: 0 1.5rem;
                     @media (min-width:725px){
-                        margin: 0 5rem;
+                        margin: 0 2rem;
                     }
                     button{
                         @include repeat-like;
                                 span{
                                     color: var(--color-white);
-                                    font-size: 10vw;
-                                    @media (min-width:1200px){
-                                        font-size: 7rem;
-                                    }
+                                    font-size: 4rem;
                                 }
                             }
                         }
@@ -258,9 +249,9 @@ body{
                             @include repeat-like;
                             span{
                                 color: var(--color-white);
-                                font-size: 7vw;
+                                font-size: 4rem;
                                 @media (min-width:1200px){
-                                    font-size: 7rem;
+                                    font-size: 4rem;
                                 }
                             }
                         }
@@ -272,7 +263,6 @@ body{
                 }
                 details[open]{
                     position: fixed;
-                    bottom: 0;
                     overflow: scroll;
                     height: 15vh;
                     @include detail;
