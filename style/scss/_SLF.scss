@@ -1,4 +1,4 @@
-@mixin same-for-signup-login-forgotpass($inheight,$gridrow){
+@mixin same-for-signup-login-forgotpass($inheight,$gridrow,$h3size){
     main {
         @include backcolor;
         .form{
@@ -26,6 +26,12 @@
                     font-size: 5rem;
                     @media (min-width:425px){
                         font-size: 6rem;
+                    }
+                    text-align: center;
+                    h3{
+                        color: var(--color-purple-15);
+                        font-size: #{$h3size}rem;
+                        padding-bottom: 0.3rem;
                     }
                 }
                 .form__fields{

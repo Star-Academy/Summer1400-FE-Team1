@@ -36,11 +36,17 @@ main .form form h1:first-of-type {
 main .form form .form__name {
   justify-self: center;
   font-size: 5rem;
+  text-align: center;
 }
 @media (min-width: 425px) {
   main .form form .form__name {
     font-size: 6rem;
   }
+}
+main .form form .form__name h3 {
+  color: var(--color-purple-15);
+  font-size: 2.5rem;
+  padding-bottom: 0.3rem;
 }
 main .form form .form__fields {
   align-self: center;

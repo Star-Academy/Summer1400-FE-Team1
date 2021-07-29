@@ -1,5 +1,5 @@
 @use './SLF';
-@include SLF.same-for-signup-login-forgotpass(5,4);
+@include SLF.same-for-signup-login-forgotpass(5,4,2.5);
 form{
     .form__radio{
         margin:1rem 0;
