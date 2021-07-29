@@ -1,4 +1,29 @@
-var audio = new Audio("../Sogand - Hamgonah.mp3");
+const musics =[
+    {'music_name':"Hamgonah",
+    'artist' : "Sogand",
+    'image' : "../Assets/Temp/hamgonahsogand.jpg",
+    'file' : "../Sogand - Hamgonah.mp3",
+    'rate' : 0,
+    'count' : 0},
+    {'music_name':"Tehran",
+    'artist' : "Sogand",
+    'image' : "../Assets/Temp/tehransogand.jpg",
+    'file' : "../Sogand - Hamgonah.mp3",
+    'rate' : 0,
+    'count' : 0},
+    {'music_name':"Hamgonah",
+    'artist' : "Sogand",
+    'image' : "../Assets/Temp/tehransogand.jpg",
+    'file' : "../Sogand - Hamgonah.mp3",
+    'rate' : 0,
+    'count' : 0}
+];
+let index = 0;
+var audio = new Audio(musics[index].file);
+const backimg = document.getElementsByClassName("back__music__img")[index].setAttribute("src",musics[index].image);
+const imgicon = document.getElementsByClassName("music__img")[index].setAttribute("src",musics[index].image);
+const songname = document.getElementsByClassName("music__name")[index].innerHTML = musics[index].music_name;
+const artist = document.getElementsByClassName("singer")[index].innerHTML = musics[index].artist;
 let flag = true;
 let speaker = document.getElementById("speaker").getElementsByTagName("img")[0];
 const changeIcon = () =>{
@@ -21,14 +46,14 @@ let volumeBtn = document.getElementsByClassName("volume__container")[0].getEleme
 let volBar = document.getElementById("vol");
 const decrease = () =>{
     volBar.setAttribute("value",volBar.value--);
-    audio.volume = volBar.getAttribute("value")/100;
 }
 const increase = () =>{
     volBar.setAttribute("value",volBar.value++);
-    audio.volume = volBar.getAttribute("value")/100;
 }
 volumeBtn[0].addEventListener("click",decrease);
 volumeBtn[1].addEventListener("click",increase);
+audio.volume = volBar.value/100;
+
 
 ////
 const playpause = document.getElementById("playpause").getElementsByTagName("img")[0];
@@ -54,3 +79,31 @@ const playOrPause = () =>{
     }
 }
 playpause.addEventListener("click",playOrPause);
+
+/////
+const nextSng = document.getElementById("next");
+nextSng.addEventListener("click",() => {index++; }) ;
+const preSng = document.getElementById("prev");
+nextSng.addEventListener("click",() => {index--; }) ;
+////
+const endTime = document.getElementById("durtime").innerHTML=audio.duration;
+console.log(audio.duration);
+
+
+///
+const stars = document.getElementsByClassName("rate")[0].getElementsByClassName("stars");
+const colorstars = (num)=>{
+    musics[index].count++;
+    musics[index].rate = ((num + 1) + (musics[index].rate * musics[index].count))/(musics[index].count + 1);
+    console.log(musics[index].rate,musics[index].count);
+    for(let i=0 ; i<num + 1 ; i++){
+        stars[i].style.filter = " invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%)";
+    }
+    for(let i=num + 1 ; i<stars.length ; i++){
+        stars[i].style.filter= "invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(0%)";
+    }
+}
+for(let i=0 ; i<stars.length ; i++){
+    stars[i].addEventListener("click",() => colorstars(i));
+}
+
