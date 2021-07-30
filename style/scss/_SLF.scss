@@ -1,0 +1,120 @@
+@mixin same-for-signup-login-forgotpass($inheight,$gridrow,$h3size){
+    main {
+        @include backcolor;
+        .form{
+            display: grid;
+            min-height: 87vh;
+            form{
+                display: grid;
+                align-items: stretch;
+                grid-auto-columns: auto;
+                place-self: center;
+                padding: 1rem;
+                width: 100%;
+                max-width: 40rem;
+                border-radius: 1rem;
+                @media (min-width:768px){
+                    background-color: var(--color-gray-08);
+                    box-shadow: 2px 2px 30px var(--color-gray-50);
+                    opacity: 0.79;
+                }
+                h1:first-of-type{
+                    color: var(--color-purple-06);
+                }
+                .form__name{
+                    justify-self: center;
+                    font-size: 5rem;
+                    @media (min-width:425px){
+                        font-size: 6rem;
+                    }
+                    text-align: center;
+                    h3{
+                        color: var(--color-purple-15);
+                        font-size: #{$h3size}rem;
+                        padding-bottom: 0.3rem;
+                    }
+                }
+                .form__fields{
+                    align-self: center;
+                    justify-self: center;
+                    width: 100%;
+                    > input{
+                        display: block;
+                        width: 80%;
+                        height:#{$inheight}vh;
+                        border:none;
+                        border-radius: 0.5rem;
+                        color: var(--color-black);
+                        text-align: center;
+                        margin: 0.1rem auto;
+                        font-size: 1rem;
+                        transition: .3s linear;
+                        @media (min-width:425px){
+                            font-size: 1.6rem;
+                        }
+                    }
+                    &:focus{
+                        border: var(--color-gray-25) solid;
+                    }
+                    label{
+                        opacity: 0;
+                    }
+                }
+                .signUp , .login , .send-email{
+                    width: 100%;
+                    align-self: start;
+                    justify-self: center;
+                    > a{
+                        margin:0 auto;
+                        display: block;
+                        text-decoration: none;
+                        color: var(--color-white);
+                        font-size: 1.3rem;
+                        margin-top: 0.6rem;
+                        text-align: center;
+                        &:hover{
+                            color:var(--color-purple-06);
+                        }
+                        @media (min-width:425px){
+                            font-size: 1.5rem;
+                        }
+                    }
+                    [type="submit"]{
+                        margin:1rem auto;
+                        display:block;
+                        background-color: var(--color-purple-08);
+                        color: var(--color-white);
+                        width: 60%;
+                        border: none;
+                        border-radius: 2rem;
+                        height: $inheight +1vh;
+                        font-size: 1.5rem;
+                        @media (min-width:425px){
+                            font-size: 2rem;
+                        }
+                    }
+                    input:hover{
+                        cursor: pointer;
+                        background-color: var(--color-purple-16);
+                    }
+                }
+            }
+        }
+    }
+}
+@mixin backcolor{
+    --rlist: var(--c) 0 1px, transparent 0 17rem;
+	    --dim: 100% 100% no-repeat;
+	    --ang: 45deg;
+        box-shadow: 2px 2px 17px  var(--color-purple-06);
+	    background: 
+			repeating-linear-gradient(var(--ang-0, -45deg), 
+					var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
+			repeating-linear-gradient(var(--ang-1, 45deg), 
+					var(--rlist)) var(--pos-1, 0 0)/ var(--dim), 
+			linear-gradient(var(--ang), var(--nlist));
+		--ang-0: -120deg;
+		--ang-1: 120deg;
+        --c: var(--color-purple-16);
+		--nlist: var(--color-purple-16), var(--color-black);
+}

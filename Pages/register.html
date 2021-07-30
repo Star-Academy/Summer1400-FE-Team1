@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام</title>
+    <link rel="stylesheet" href="../style/css/Colors.css">
+    <link rel="stylesheet"  type="text/css" href="../style/css/Signup.css">
+    <link rel="stylesheet" href="../style/css/Header.css">
+    <link rel="stylesheet" href="../style/css/Footer.css">
+    <script src="../scripts/Register.js" defer></script>
+</head>
+<body> 
+       <header>
+        <div class="header_content">
+            <a class="hamburger">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <div class="logo"><a href="../index.html">آهنگ باز</a></div>
+            <nav class="main_nav">
+                <ul>
+                    <li class="active"><a href="../index.html">خانه</a></li>
+                    <li><a href="./all-musics.html">آهنگ ها</a></li>
+                    <li><a href="#">خوانندگان</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                </ul>
+            </nav>
+            <div class="log_reg">
+                <ul>
+                    <li><a href="./login.html">ورود</a></li>
+                    <li><a href="./register.html">ثبت نام</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="alternative"></div>
+    <main>
+        <div class="form">
+            <form action="">
+                <div class="form__name">
+                    <h1>آهنگ باز</h1>
+                    <h3></h3>
+                </div>
+                <div class="form__fields">
+                    <label for="name">First name</label>
+                    <input type="text" name="name" placeholder="نام" />
+                    <label for="lastName">Last name</label>
+                    <input type="text" name="lastName" placeholder="نام خانوادگی" />
+                    <label for="userName">Username</label>
+                    <input type="text" name="userName" placeholder="نام کاربری" />
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="رمز عبور" pattern="[a-z]+[A-Z]+[0-9]+"
+                        minlength="8" maxlength="12" />
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="ایمیل" />
+                </div>
+                <div class="form__radio">
+                    <label for="gender">جنسیت</label>
+                    <label for="female">زن</label>
+                    <input type="radio" name="gender" value="female" id="female" />
+                    <label for="male">مرد</label>
+                    <input type="radio" name="gender" value="male" id="male" />
+                </div>
+                <div class="signUp">
+                    <input type="submit" value="ثبت نام" />
+                    <a href="./login.html">حساب کاربری دارید؟ وارد شوید</a>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="flex-rw">
+        <section class="footer-social flex-rw">
+            <span class="footer-social-overlap footer-social-connect">
+                تماس <span class="footer-social-small">با</span> ما
+            </span>
+            <span class="footer-social-overlap footer-social-icons-wrapper">
+                <a href="#" class="anchor">
+                    <img src="../Assets/Icons/email_white_24dp.svg" />
+                </a>
+                <a href="#" class="anchor">
+                    <img src="../Assets/Icons/facebook_white_24dp.svg" />
+                </a>
+                <a href="#" class="anchor">
+                    <img src="../Assets/Icons/group_add_white_24dp.svg" />
+                </a>
+            </span>
+        </section>
+        <section class="footer-bottom-section flex-rw">
+            <div class="footer-bottom-wrapper">
+                <i class="fa fa-copyright" role="copyright">
+                    Summer 2021 - codestar academy</i>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

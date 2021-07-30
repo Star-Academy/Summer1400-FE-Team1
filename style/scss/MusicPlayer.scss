@@ -1,0 +1,51 @@
+@use './Colors.scss';
+.player-section{
+    @media (max-width:768px){
+        padding:2rem 0.5rem !important;
+    }
+}
+.player{
+    direction: rtl;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding:3rem;
+    *{
+        text-decoration:none;
+    }
+    .card-player{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        @media (max-width:768px){
+            flex-direction: column;
+        }
+    }
+    .music-img{
+        width: 100%;
+        height: auto;
+        max-width: 30rem;
+    }
+    .info{
+        width: 50%;
+        color:var(--color-white);
+        padding: 2rem;
+        @media (max-width:768px){
+            width: 100%;
+        }
+        .music-name{
+            font-size: 4.2rem;
+        }
+        .singer-name{
+            font-size: 3.5rem;
+        }
+        .music-info{
+            font-size: 1.5rem;
+        }
+        .music-audio-player{
+            width: 100%;
+            margin: 1rem .5rem;
+        }
+    }
+}

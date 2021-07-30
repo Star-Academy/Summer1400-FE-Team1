@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/css/Header.css">
+    <link rel="stylesheet" href="./style/css/Footer.css">
+    <link rel="stylesheet" href="./style/css/Landing.css">
+    <title>SpotiWhy!</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_content">
+            <a class="hamburger">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <div class="logo"><a href="./index.html">آهنگ باز</a></div>
+            <nav class="main_nav">
+                <ul>
+                    <li class="active"><a href="./index.html">خانه</a></li>
+                    <li><a href="./Pages/all-musics.html">آهنگ ها</a></li>
+                    <li><a href="#">خوانندگان</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                </ul>
+            </nav>
+            <div class="log_reg">
+                <ul>
+                    <li><a href="./Pages/login.html">ورود</a></li>
+                    <li><a href="./Pages/register.html">ثبت نام</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="alternative"></div>
+
+    <section class="banner">
+        <div class="content">
+            <h2 class="title">آهنگ باز</h2>
+            <p class="subtitle"></p>با ما منحصر به فرد باش </p>
+            <div class="btns">
+                <a href="./Pages/all-musics.html">آهنگ ها</a>
+            </div>
+        </div>
+    </section>
+    <section class="music-section">
+        <h2 class="section-title">آهنگ های جدید </h2>
+        <ul class="cards-container">
+            <li>
+                <a href="./Pages/music-info.html?={musicId}" class="music-link">
+                    <div class="music-card">
+                        <img src="./Assets/Temp/example.jpg" alt="" class="music-img">
+                        <div class="info">
+                            <h2 class="music-name">اسم آهنگ </h2>
+                            <h3 class="singer-name">نام خواننده </h3>
+
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <a class="more" href="./Pages/all-musics.html">بیشتر</a>
+    </section>
+    <section class="music-section">
+        <h2 class="section-title">هنرمندان</h2>
+        <ul class="cards-container">
+            <li>
+                <div class="artist-card">
+                    <img src="./Assets/Temp/artist.png" alt="artist" class="artist-img">
+                    <h3 class="singer-name">اسم خواننده </h3>
+                </div>
+            </li>
+        </ul>
+        <a class="more" href="./Pages/all-musics.html">بیشتر</a>
+    </section>
+    <footer class="flex-rw">
+        <section class="footer-social flex-rw">
+            <span class="footer-social-overlap footer-social-connect">
+                تماس <span class="footer-social-small">با</span> ما
+            </span>
+            <span class="footer-social-overlap footer-social-icons-wrapper">
+                <a href="#" class="anchor">
+                    <img src="./Assets/Icons/email_white_24dp.svg" />
+                </a>
+                <a href="#" class="anchor">
+                    <img src="./Assets/Icons/facebook_white_24dp.svg" />
+                </a>
+                <a href="#" class="anchor">
+                    <img src="./Assets/Icons/group_add_white_24dp.svg" />
+                </a>
+            </span>
+        </section>
+        <section class="footer-bottom-section flex-rw">
+            <div class="footer-bottom-wrapper">
+                <i class="fa fa-copyright" role="copyright">
+                    Summer 2021 - codestar academy</i>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
