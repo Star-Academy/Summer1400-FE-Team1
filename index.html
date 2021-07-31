@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./style/css/Header.css">
     <link rel="stylesheet" href="./style/css/Footer.css">
     <link rel="stylesheet" href="./style/css/Landing.css">
+    <script src="./scripts/ResponsiveHeader.js" defer></script>
+    <script src="./scripts/MusicCard.js" defer></script>
     <title>SpotiWhy!</title>
 </head>
 
@@ -15,18 +17,20 @@
     <header>
         <div class="header_content">
             <a class="hamburger">
-                <input type="checkbox" />
+                <input type="checkbox" id="HamburgerMenu" />
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
             <div class="logo"><a href="./index.html">آهنگ باز</a></div>
-            <nav class="main_nav">
+            <nav class="main_nav" id="TopNav">
                 <ul>
                     <li class="active"><a href="./index.html">خانه</a></li>
                     <li><a href="./Pages/all-musics.html">آهنگ ها</a></li>
                     <li><a href="#">خوانندگان</a></li>
                     <li><a href="#">درباره ما</a></li>
+                    <li><a href="./Pages/login.html">ورود</a></li>
+                    <li><a href="./Pages/register.html">ثبت نام</a></li>
                 </ul>
             </nav>
             <div class="log_reg">
@@ -51,19 +55,7 @@
     </section>
     <section class="music-section">
         <h2 class="section-title">آهنگ های جدید </h2>
-        <ul class="cards-container">
-            <li>
-                <a href="./Pages/music-info.html?={musicId}" class="music-link">
-                    <div class="music-card">
-                        <img src="./Assets/Temp/example.jpg" alt="" class="music-img">
-                        <div class="info">
-                            <h2 class="music-name">اسم آهنگ </h2>
-                            <h3 class="singer-name">نام خواننده </h3>
-
-                        </div>
-                    </div>
-                </a>
-            </li>
+        <ul class="cards-container" id="container-new">
         </ul>
         <a class="more" href="./Pages/all-musics.html">بیشتر</a>
     </section>

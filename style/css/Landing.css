@@ -67,7 +67,7 @@
   align-items: flex-start;
   color: #fff;
 }
-.music-section li:nth-child(n+7) {
+.music-section li:nth-child(n+6) {
   display: none;
 }
 @media (max-width: 572px) {
@@ -113,6 +113,16 @@
     min-width: 19rem;
     min-height: 19rem;
   }
+}
+.music-section .music-card .content {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.music-section .music-card .icon {
+  width: 100%;
+  max-width: 3rem;
 }
 .music-section .music-card img {
   max-height: 18rem;
