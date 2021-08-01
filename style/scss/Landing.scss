@@ -1,2 +1,70 @@
 @use "./colors";
+@use "./musicSections.scss";
 
+body{
+    background-image: url('../../Assets/Images/banner.jpg');
+    background-color: var(--color-gray-05);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.banner{
+    width: 100%;
+    height: 90vh;
+    color:var(--color-gray-92);
+    text-align: center;
+    font-size: 4rem;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    @media screen and (max-width: 692px) {
+        top:15%;
+        justify-content: center;
+    }
+    .content{
+        min-width: 30rem;
+        position: absolute;
+        top:50%;
+        right:20%;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 2rem;
+        @media screen and (max-width: 692px) {
+            top:15%;
+            right:15%;
+            background-color: transparent;
+        }
+        @media screen and (max-width: 450px) {
+            right:5%;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        .title{
+            font-size: 3rem;
+        }
+        .btns{
+            cursor: pointer;
+            width: 15rem;
+            border-radius: 50rem;
+            background-color:var(--color-purple-08);
+            margin:1rem 0;
+            padding:1rem;
+            a {
+                width: 4.5rem;
+                font-size: 1.5rem;
+                color:var(--color-white);
+                text-decoration: none;
+            }
+            @media screen and (max-width:692px) {
+                margin:38rem 0;
+            }
+            &:hover{
+                background-color:var(--color-purple-16);
+            }
+        }
+    }
+}

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Vazir;
+  src: url(../../Assets/Fonts/Vazir.ttf);
+}
 *,
 *::after,
 *::before {
@@ -5,6 +9,7 @@
   margin: 0px;
   padding: 0px;
   font-size: 62.5%;
+  font-family: Vazir;
 }
 
 :root {
@@ -49,6 +54,230 @@
   --color-gray-08: #141414;
   --color-gray-05: #0c0c0c;
   --color-gray-02: #050505;
+}
+
+.music-section {
+  min-height: 35vh;
+  width: 100%;
+  padding: 2rem 6rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-start;
+  color: #fff;
+}
+.music-section li:nth-child(n+6) {
+  display: none;
+}
+@media (max-width: 572px) {
+  .music-section li:nth-child(n+3) {
+    display: none;
+  }
+}
+.music-section .more {
+  font-size: 1.4rem;
+  color: var(--color-purple-15);
+  text-decoration: none;
+}
+.music-section .section-title {
+  font-size: 2.5rem;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+.music-section .music-card {
+  border-radius: 2rem;
+  background-color: var(--color-black);
+  min-width: 22rem;
+  min-height: 22rem;
+  max-width: 20rem;
+  text-align: right;
+  margin: 0.2rem 2.1rem;
+  cursor: pointer;
+  border: 0.1rem var(--color-black) solid;
+}
+.music-section .music-card * {
+  text-decoration: none;
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .music-section .music-card {
+    min-width: 18rem;
+    min-height: 18rem;
+  }
+}
+@media (max-width: 572px) {
+  .music-section .music-card {
+    margin: 0.5rem 0.2rem;
+    min-width: 19rem;
+    min-height: 19rem;
+  }
+}
+.music-section .music-card .content {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.music-section .music-card .icon {
+  width: 100%;
+  max-width: 3rem;
+}
+.music-section .music-card img {
+  max-height: 18rem;
+  width: 100%;
+  opacity: 1;
+  border-top-left-radius: 2rem;
+}
+@media (max-width: 572px) {
+  .music-section .music-card img {
+    height: auto;
+  }
+}
+.music-section .music-card .info {
+  padding: 1rem;
+}
+.music-section .music-card .music-name {
+  font-size: 1.7rem;
+}
+.music-section .music-card .singer-name {
+  font-size: 1rem;
+}
+.music-section .music-card .music-info {
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+.music-section .cards-container {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  overflow: auto;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+.music-section .cards-container * {
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 572px) {
+  .music-section .cards-container {
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+  }
+}
+.music-section .cards-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  justify-items: center;
+}
+.music-section .cards-container .artist-card {
+  background-color: var(--color-black);
+  min-width: 19rem;
+  min-height: 19rem;
+  text-align: right;
+  margin: 0 2rem;
+  cursor: pointer;
+  border: 0.5rem var(--color-black) solid;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 2rem;
+}
+@media (max-width: 572px) {
+  .music-section .cards-container .artist-card {
+    margin: 0.5rem 0;
+  }
+}
+.music-section .cards-container .artist-card img {
+  max-height: 15rem;
+  height: 100%;
+  opacity: 1;
+  width: auto;
+  border-top-left-radius: 2rem;
+}
+.music-section .cards-container .artist-card .singer-name {
+  margin: 0 1.2rem;
+  font-size: 1.5rem;
+}
+
+body {
+  background-image: url("../../Assets/Images/banner.jpg");
+  background-color: var(--color-gray-05);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: 90vh;
+  color: var(--color-gray-92);
+  text-align: center;
+  font-size: 4rem;
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 692px) {
+  .banner {
+    top: 15%;
+    justify-content: center;
+  }
+}
+.banner .content {
+  min-width: 30rem;
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 692px) {
+  .banner .content {
+    top: 15%;
+    right: 15%;
+    background-color: transparent;
+  }
+}
+@media screen and (max-width: 450px) {
+  .banner .content {
+    right: 5%;
+  }
+}
+.banner .content .title {
+  font-size: 3rem;
+}
+.banner .content .btns {
+  cursor: pointer;
+  width: 15rem;
+  border-radius: 50rem;
+  background-color: var(--color-purple-08);
+  margin: 1rem 0;
+  padding: 1rem;
+}
+.banner .content .btns a {
+  width: 4.5rem;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  text-decoration: none;
+}
+@media screen and (max-width: 692px) {
+  .banner .content .btns {
+    margin: 38rem 0;
+  }
+}
+.banner .content .btns:hover {
+  background-color: var(--color-purple-16);
 }
 
 /*# sourceMappingURL=Landing.css.map */

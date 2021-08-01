@@ -1,0 +1,140 @@
+@use './Colors.scss';
+.music-section{
+    min-height: 35vh;
+    width: 100%;
+    padding:2rem 6rem;
+    background-color: rgba(0, 0, 0, 0.6);;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-start;
+    color: #fff;
+    li:nth-child(n+6){
+        display: none;
+    }
+    @media (max-width: 572px) {
+        li:nth-child(n+3){
+            display: none;
+        }
+    }
+    .more{
+        font-size: 1.4rem;
+        color:var(--color-purple-15);
+        text-decoration: none;
+    }
+    .section-title{
+        font-size: 2.5rem;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 1rem;
+    }
+    .music-card{
+        *{
+            text-decoration: none;
+            color:#fff;
+        }
+        border-radius: 2rem;
+        background-color: var(--color-black);
+        min-width: 22rem;
+        min-height: 22rem;
+         @media (max-width: 1024px) {
+            min-width: 18rem;
+            min-height: 18rem;
+        }
+        max-width: 20rem;
+        text-align: right;
+        margin:0.2rem 2.1rem;
+        @media (max-width: 572px) {
+            margin: .5rem 0.2rem;
+            min-width: 19rem;
+            min-height: 19rem;
+        }
+        cursor: pointer;
+        border:0.1rem var(--color-black) solid;
+        .content{
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .icon{
+            width: 100%;
+            max-width: 3rem;
+        }
+        img{
+            max-height: 18rem;
+            width: 100%;
+            opacity: 1;
+            border-top-left-radius: 2rem;
+            @media (max-width: 572px) {
+               height: auto;
+            }
+        }
+        .info{
+            padding: 1rem;
+        }
+        .music-name{
+            font-size: 1.7rem;
+        }
+        .singer-name {
+            font-size: 1rem;
+        }
+        .music-info{
+            color: var(--color-white);
+            font-size: 1.2rem;;
+        }
+    } 
+    .cards-container{
+        width: 100%;
+        display: flex;
+        flex: 1;
+        overflow: auto;
+        flex-direction: row;
+        justify-content: flex-end;
+        list-style-type:none;
+        *{
+            color: #fff;
+            text-decoration: none;
+        }
+        @media (max-width: 572px) {
+            flex-direction: column;
+            align-items: center;
+            justify-self: center;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            justify-items: center;
+            
+        }
+        .artist-card{
+            background-color: var(--color-black);
+            min-width: 19rem;
+            min-height: 19rem;
+            text-align: right;
+            margin:0 2rem;
+            @media (max-width: 572px) {
+                margin: .5rem 0;
+            }
+            cursor: pointer;
+            border:0.5rem var(--color-black) solid;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            border-top-left-radius: 2rem;
+            img{
+                max-height: 15rem;
+                height: 100%;
+                opacity: 1;
+                width: auto;
+                border-top-left-radius: 2rem;
+            }
+            .singer-name {
+                margin:0 1.2rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
